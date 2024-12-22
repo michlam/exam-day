@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bpmxcn30oc2rk"]
+
+[ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="1_aicun"]
+
+[resource]
+font = ExtResource("1_aicun")
+font_size = 120
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 25
+shadow_color = Color(0, 0, 0, 0.556863)

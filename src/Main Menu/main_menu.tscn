@@ -1,0 +1,118 @@
+[gd_scene load_steps=10 format=3 uid="uid://lmc07lnau5pr"]
+
+[ext_resource type="Texture2D" uid="uid://b23vosy4wsoxi" path="res://assets/Images/Classroom.png" id="1_g75gw"]
+[ext_resource type="Texture2D" uid="uid://bfkkoycpdlldb" path="res://assets/Images/Post-it Normal.png" id="2_epdgr"]
+[ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
+[ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
+[ext_resource type="Script" path="res://src/Main Menu/load_button.gd" id="5_0eo4q"]
+[ext_resource type="Script" path="res://src/Main Menu/settings_button.gd" id="6_lhbpo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6eut1"]
+font = ExtResource("3_rc6y7")
+font_size = 120
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 25
+shadow_color = Color(0, 0, 0, 0.556863)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7fekc"]
+font = ExtResource("3_rc6y7")
+font_size = 120
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 25
+shadow_color = Color(0, 0, 0, 0.556863)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yj6b7"]
+font = ExtResource("3_rc6y7")
+font_size = 120
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 25
+shadow_color = Color(0, 0, 0, 0.556863)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(601, 404)
+scale = Vector2(0.323378, 0.323378)
+texture = ExtResource("1_g75gw")
+region_enabled = true
+region_rect = Rect2(30.8105, 2216.03, 4301.38, 2643.67)
+
+[node name="StartButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 47.0
+offset_top = 186.0
+offset_right = 597.0
+offset_bottom = 728.0
+rotation = -0.227668
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("3_hp2q6")
+
+[node name="StartLabel" type="Label" parent="CanvasLayer/StartButton"]
+layout_mode = 0
+offset_left = 110.068
+offset_top = 128.053
+offset_right = 437.068
+offset_bottom = 425.053
+text = "START
+GAME"
+label_settings = SubResource("LabelSettings_6eut1")
+horizontal_alignment = 1
+
+[node name="LoadButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 276.0
+offset_top = 310.0
+offset_right = 826.0
+offset_bottom = 852.0
+rotation = 0.369716
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("5_0eo4q")
+
+[node name="LoadLabel" type="Label" parent="CanvasLayer/LoadButton"]
+layout_mode = 0
+offset_left = 145.151
+offset_top = 123.668
+offset_right = 401.151
+offset_bottom = 420.668
+text = "LOAD
+GAME"
+label_settings = SubResource("LabelSettings_7fekc")
+horizontal_alignment = 1
+
+[node name="SettingsButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 83.0
+offset_top = 544.0
+offset_right = 633.0
+offset_bottom = 1086.0
+rotation = -0.0887925
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("6_lhbpo")
+
+[node name="SettingsLabel" type="Label" parent="CanvasLayer/SettingsButton"]
+layout_mode = 0
+offset_left = 36.6751
+offset_top = 185.495
+offset_right = 518.675
+offset_bottom = 482.495
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_yj6b7")
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_exited"]
