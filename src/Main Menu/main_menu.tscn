@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bfkkoycpdlldb" path="res://assets/Images/Post-it Normal.png" id="2_epdgr"]
 [ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
 [ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
+[ext_resource type="Script" path="res://src/Main Menu/load_button.gd" id="5_0eo4q"]
 [ext_resource type="Script" path="res://src/Main Menu/settings_button.gd" id="6_lhbpo"]
 [ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="7_0th2w"]
 [ext_resource type="Texture2D" uid="uid://dl85kf5p0jh2e" path="res://assets/Images/Chalkboard.png" id="9_5lb1k"]
@@ -23,17 +24,6 @@ outline_size = 32
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 25
 shadow_color = Color(0, 0, 0, 0.556863)
-
-[sub_resource type="GDScript" id="GDScript_hsw4e"]
-script/source = "extends TextureButton
-
-func _on_mouse_entered() -> void:
-	$LoadLabel.label_settings.font_color = Color(\"DARK_SALMON\")
-
-
-func _on_mouse_exited() -> void:
-	$LoadLabel.label_settings.font_color = Color(\"WHITE\")
-"
 
 [sub_resource type="LabelSettings" id="LabelSettings_7fekc"]
 font = ExtResource("3_rc6y7")
@@ -178,7 +168,7 @@ offset_bottom = 820.655
 rotation = 0.369716
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
-script = SubResource("GDScript_hsw4e")
+script = ExtResource("5_0eo4q")
 
 [node name="LoadLabel" type="Label" parent="CanvasLayer/LoadButton"]
 layout_mode = 0
