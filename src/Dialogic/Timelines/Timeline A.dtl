@@ -2,3 +2,4 @@ join "Main Character" left
 "Main Character": Hello hello!\
 I'm super cool!
 "Main Character": Yup, very cool.
+[signal arg="activate_something"]
