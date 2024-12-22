@@ -1,14 +1,13 @@
 [gd_scene load_steps=30 format=3 uid="uid://lmc07lnau5pr"]
 
-[ext_resource type="Texture2D" uid="uid://b23vosy4wsoxi" path="res://assets/Images/Classroom.png" id="1_g75gw"]
+[ext_resource type="Texture2D" uid="uid://b23vosy4wsoxi" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
 [ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
-[ext_resource type="Texture2D" uid="uid://bfkkoycpdlldb" path="res://assets/Images/Post-it Normal.png" id="2_epdgr"]
+[ext_resource type="Texture2D" uid="uid://6byq51sxk7qb" path="res://assets/Images/Objects/Post-it Normal.png" id="2_epdgr"]
 [ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
 [ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
 [ext_resource type="Script" path="res://src/Main Menu/load_button.gd" id="5_0eo4q"]
 [ext_resource type="Script" path="res://src/Main Menu/settings_button.gd" id="6_lhbpo"]
 [ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="7_0th2w"]
-[ext_resource type="Texture2D" uid="uid://dl85kf5p0jh2e" path="res://assets/Images/Chalkboard.png" id="9_5lb1k"]
 [ext_resource type="Script" path="res://src/Main Menu/load_menu.gd" id="9_sv0x3"]
 [ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="10_e231x"]
 [ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="11_gkrpf"]
@@ -48,6 +47,9 @@ font_color = Color(0.8, 0.8, 0.8, 1)
 outline_size = 32
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3x0y1"]
+load_path = "res://.godot/imported/image(2).png-ea12bd4ca1e2e91fbac4cf74cdc98281.ctex"
+
 [sub_resource type="LabelSettings" id="LabelSettings_om1hq"]
 font = ExtResource("7_0th2w")
 font_size = 100
@@ -84,6 +86,21 @@ font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
 
+[sub_resource type="Animation" id="Animation_6cdss"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TransitionColor:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_o2mkw"]
 resource_name = "fade_out"
 length = 3.0
@@ -98,21 +115,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_6cdss"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/TransitionColor:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hc8ru"]
@@ -222,17 +224,16 @@ visible = false
 script = ExtResource("9_sv0x3")
 
 [node name="Chalkboard" type="Sprite2D" parent="CanvasLayer/LoadMenu"]
-position = Vector2(590, 407)
-scale = Vector2(1.35333, 1.35333)
-texture = ExtResource("9_5lb1k")
+position = Vector2(604, 390)
+texture = SubResource("CompressedTexture2D_3x0y1")
 
 [node name="Load1" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -305.911
-offset_top = -179.557
-offset_right = 244.089
-offset_bottom = 362.443
+offset_left = -436.0
+offset_top = -253.0
+offset_right = 114.0
+offset_bottom = 289.0
 rotation = -0.0769885
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("10_e231x")
 
@@ -246,16 +247,17 @@ text = "NO SAVE FOUND"
 label_settings = SubResource("LabelSettings_om1hq")
 
 [node name="Load2" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -79.0641
-offset_top = -188.424
-offset_right = 470.936
-offset_bottom = 353.576
+offset_left = -112.0
+offset_top = -260.0
+offset_right = 438.0
+offset_bottom = 282.0
 rotation = 0.0602499
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("11_gkrpf")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load2"]
+layout_mode = 0
 offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
@@ -264,16 +266,17 @@ text = "NO SAVE FOUND"
 label_settings = SubResource("LabelSettings_mh3l4")
 
 [node name="Load3" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = 127.094
-offset_top = -181.035
-offset_right = 677.094
-offset_bottom = 360.966
+offset_left = 195.0
+offset_top = -257.0
+offset_right = 745.0
+offset_bottom = 285.001
 rotation = -0.0134794
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("12_fv1cq")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load3"]
+layout_mode = 0
 offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
@@ -282,16 +285,17 @@ text = "NO SAVE FOUND"
 label_settings = SubResource("LabelSettings_30uwu")
 
 [node name="Load4" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -295.567
-offset_top = 21.4286
-offset_right = 254.433
-offset_bottom = 563.429
+offset_left = -416.0
+offset_top = 32.0
+offset_right = 134.0
+offset_bottom = 574.0
 rotation = -0.00947072
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("13_g7j8q")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load4"]
+layout_mode = 0
 offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
@@ -300,16 +304,17 @@ text = "NO SAVE FOUND"
 label_settings = SubResource("LabelSettings_2yj7t")
 
 [node name="Load5" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -88.67
-offset_top = 20.6896
-offset_right = 461.33
-offset_bottom = 562.69
+offset_left = -124.0
+offset_top = 37.0
+offset_right = 426.0
+offset_bottom = 579.0
 rotation = -0.0769885
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("14_7itt4")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load5"]
+layout_mode = 0
 offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
@@ -318,16 +323,17 @@ text = "NO SAVE FOUND"
 label_settings = SubResource("LabelSettings_emrxe")
 
 [node name="Load6" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = 146.305
-offset_top = 7.38915
-offset_right = 696.305
-offset_bottom = 549.389
+offset_left = 218.0
+offset_top = 9.99999
+offset_right = 768.0
+offset_bottom = 552.0
 rotation = 0.178195
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("15_pu2i1")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load6"]
+layout_mode = 0
 offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274

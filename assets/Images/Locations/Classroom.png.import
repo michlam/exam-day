@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl85kf5p0jh2e"
-path="res://.godot/imported/Chalkboard.png-6ec29c98d69e43acd1da0fe18973c54f.ctex"
+uid="uid://b23vosy4wsoxi"
+path="res://.godot/imported/Classroom.png-329637698a56408c7715ae6ec016d36e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Chalkboard.png"
-dest_files=["res://.godot/imported/Chalkboard.png-6ec29c98d69e43acd1da0fe18973c54f.ctex"]
+source_file="res://assets/Images/Locations/Classroom.png"
+dest_files=["res://.godot/imported/Classroom.png-329637698a56408c7715ae6ec016d36e.ctex"]
 
 [params]
 
