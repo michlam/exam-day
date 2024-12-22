@@ -1,11 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://lmc07lnau5pr"]
+[gd_scene load_steps=27 format=3 uid="uid://lmc07lnau5pr"]
 
+[ext_resource type="Script" path="res://src/Main Menu/canvas_layer.gd" id="1_03d2m"]
 [ext_resource type="Texture2D" uid="uid://b23vosy4wsoxi" path="res://assets/Images/Classroom.png" id="1_g75gw"]
 [ext_resource type="Texture2D" uid="uid://bfkkoycpdlldb" path="res://assets/Images/Post-it Normal.png" id="2_epdgr"]
 [ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
 [ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
-[ext_resource type="Script" path="res://src/Main Menu/load_button.gd" id="5_0eo4q"]
 [ext_resource type="Script" path="res://src/Main Menu/settings_button.gd" id="6_lhbpo"]
+[ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="7_0th2w"]
+[ext_resource type="Texture2D" uid="uid://dl85kf5p0jh2e" path="res://assets/Images/Chalkboard.png" id="9_5lb1k"]
+[ext_resource type="Script" path="res://src/Main Menu/load_menu.gd" id="9_sv0x3"]
+[ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="10_e231x"]
+[ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="11_gkrpf"]
+[ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="12_fv1cq"]
+[ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="13_g7j8q"]
+[ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="14_7itt4"]
+[ext_resource type="Script" path="res://src/Main Menu/load_6.gd" id="15_pu2i1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6eut1"]
 font = ExtResource("3_rc6y7")
@@ -14,6 +23,17 @@ outline_size = 32
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 25
 shadow_color = Color(0, 0, 0, 0.556863)
+
+[sub_resource type="GDScript" id="GDScript_hsw4e"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$LoadLabel.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$LoadLabel.label_settings.font_color = Color(\"WHITE\")
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_7fekc"]
 font = ExtResource("3_rc6y7")
@@ -31,6 +51,49 @@ outline_color = Color(0, 0, 0, 1)
 shadow_size = 25
 shadow_color = Color(0, 0, 0, 0.556863)
 
+[sub_resource type="LabelSettings" id="LabelSettings_e67l0"]
+font = ExtResource("7_0th2w")
+font_size = 240
+font_color = Color(0.8, 0.8, 0.8, 1)
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_om1hq"]
+font = ExtResource("7_0th2w")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_mh3l4"]
+font = ExtResource("7_0th2w")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_30uwu"]
+font = ExtResource("7_0th2w")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_2yj7t"]
+font = ExtResource("7_0th2w")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_emrxe"]
+font = ExtResource("7_0th2w")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jkgs"]
+font = ExtResource("7_0th2w")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -40,6 +103,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_03d2m")
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(601, 404)
@@ -49,10 +113,10 @@ region_enabled = true
 region_rect = Rect2(30.8105, 2216.03, 4301.38, 2643.67)
 
 [node name="StartButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 47.0
-offset_top = 186.0
-offset_right = 597.0
-offset_bottom = 728.0
+offset_left = 94.0
+offset_top = 154.655
+offset_right = 644.0
+offset_bottom = 696.655
 rotation = -0.227668
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
@@ -70,14 +134,14 @@ label_settings = SubResource("LabelSettings_6eut1")
 horizontal_alignment = 1
 
 [node name="LoadButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 276.0
-offset_top = 310.0
-offset_right = 826.0
-offset_bottom = 852.0
+offset_left = 323.0
+offset_top = 278.655
+offset_right = 873.0
+offset_bottom = 820.655
 rotation = 0.369716
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
-script = ExtResource("5_0eo4q")
+script = SubResource("GDScript_hsw4e")
 
 [node name="LoadLabel" type="Label" parent="CanvasLayer/LoadButton"]
 layout_mode = 0
@@ -91,10 +155,10 @@ label_settings = SubResource("LabelSettings_7fekc")
 horizontal_alignment = 1
 
 [node name="SettingsButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 83.0
-offset_top = 544.0
-offset_right = 633.0
-offset_bottom = 1086.0
+offset_left = 130.0
+offset_top = 512.655
+offset_right = 680.0
+offset_bottom = 1054.66
 rotation = -0.0887925
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
@@ -110,9 +174,156 @@ text = "SETTINGS"
 label_settings = SubResource("LabelSettings_yj6b7")
 horizontal_alignment = 1
 
+[node name="Logo" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(863, 405)
+rotation = 0.115299
+scale = Vector2(0.838644, 0.838644)
+texture = ExtResource("2_epdgr")
+
+[node name="Label" type="Label" parent="CanvasLayer/Logo"]
+offset_left = -219.0
+offset_top = -223.0
+offset_right = 208.0
+offset_bottom = 266.0
+text = "EXAM
+DAY"
+label_settings = SubResource("LabelSettings_e67l0")
+horizontal_alignment = 1
+
+[node name="LoadMenu" type="CanvasLayer" parent="CanvasLayer"]
+visible = false
+script = ExtResource("9_sv0x3")
+
+[node name="Chalkboard" type="Sprite2D" parent="CanvasLayer/LoadMenu"]
+position = Vector2(590, 407)
+scale = Vector2(1.35333, 1.35333)
+texture = ExtResource("9_5lb1k")
+
+[node name="Load1" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
+offset_left = -305.911
+offset_top = -179.557
+offset_right = 244.089
+offset_bottom = 362.443
+rotation = -0.0769885
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("10_e231x")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load1"]
+layout_mode = 0
+offset_left = 69.8492
+offset_top = 215.37
+offset_right = 487.849
+offset_bottom = 317.37
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_om1hq")
+
+[node name="Load2" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
+offset_left = -79.0641
+offset_top = -188.424
+offset_right = 470.936
+offset_bottom = 353.576
+rotation = 0.0602499
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("11_gkrpf")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load2"]
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_mh3l4")
+
+[node name="Load3" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
+offset_left = 127.094
+offset_top = -181.035
+offset_right = 677.094
+offset_bottom = 360.966
+rotation = -0.0134794
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("12_fv1cq")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load3"]
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_30uwu")
+
+[node name="Load4" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
+offset_left = -295.567
+offset_top = 21.4286
+offset_right = 254.433
+offset_bottom = 563.429
+rotation = -0.00947072
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("13_g7j8q")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load4"]
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_2yj7t")
+
+[node name="Load5" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
+offset_left = -88.67
+offset_top = 20.6896
+offset_right = 461.33
+offset_bottom = 562.69
+rotation = -0.0769885
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("14_7itt4")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load5"]
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_emrxe")
+
+[node name="Load6" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
+offset_left = 146.305
+offset_top = 7.38915
+offset_right = 696.305
+offset_bottom = 549.389
+rotation = 0.178195
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_epdgr")
+script = ExtResource("15_pu2i1")
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load6"]
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_8jkgs")
+
 [connection signal="mouse_entered" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/LoadButton" to="CanvasLayer" method="_on_load_button_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load1" to="CanvasLayer/LoadMenu/Chalkboard/Load1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load1" to="CanvasLayer/LoadMenu/Chalkboard/Load1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load2" to="CanvasLayer/LoadMenu/Chalkboard/Load2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load2" to="CanvasLayer/LoadMenu/Chalkboard/Load2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load3" to="CanvasLayer/LoadMenu/Chalkboard/Load3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load3" to="CanvasLayer/LoadMenu/Chalkboard/Load3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load4" to="CanvasLayer/LoadMenu/Chalkboard/Load4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load4" to="CanvasLayer/LoadMenu/Chalkboard/Load4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load5" to="CanvasLayer/LoadMenu/Chalkboard/Load5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load5" to="CanvasLayer/LoadMenu/Chalkboard/Load5" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load6" to="CanvasLayer/LoadMenu/Chalkboard/Load6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load6" to="CanvasLayer/LoadMenu/Chalkboard/Load6" method="_on_mouse_exited"]
