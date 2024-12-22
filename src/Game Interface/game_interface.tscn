@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=2 format=3 uid="uid://dl7p557e4m0ag"]
+
+[ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 
 [node name="Game Interface" type="Control"]
 layout_mode = 3
@@ -7,5 +9,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ht1di")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1201.0
+offset_bottom = 800.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
