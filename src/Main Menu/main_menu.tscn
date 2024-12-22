@@ -1,7 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://lmc07lnau5pr"]
+[gd_scene load_steps=30 format=3 uid="uid://lmc07lnau5pr"]
 
-[ext_resource type="Script" path="res://src/Main Menu/canvas_layer.gd" id="1_03d2m"]
 [ext_resource type="Texture2D" uid="uid://b23vosy4wsoxi" path="res://assets/Images/Classroom.png" id="1_g75gw"]
+[ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
 [ext_resource type="Texture2D" uid="uid://bfkkoycpdlldb" path="res://assets/Images/Post-it Normal.png" id="2_epdgr"]
 [ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
 [ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
@@ -94,6 +94,43 @@ font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
 
+[sub_resource type="Animation" id="Animation_o2mkw"]
+resource_name = "fade_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TransitionColor:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6cdss"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TransitionColor:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hc8ru"]
+_data = {
+"RESET": SubResource("Animation_6cdss"),
+"fade_out": SubResource("Animation_o2mkw")
+}
+
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -101,9 +138,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_smct7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("1_03d2m")
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(601, 404)
@@ -308,11 +345,25 @@ offset_bottom = 325.075
 text = "NO SAVE FOUND"
 label_settings = SubResource("LabelSettings_8jkgs")
 
+[node name="TransitionColor" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_left = -68.0
+offset_top = -89.0
+offset_right = 1285.0
+offset_bottom = 884.0
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hc8ru")
+}
+
 [connection signal="mouse_entered" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="CanvasLayer/LoadButton" to="CanvasLayer" method="_on_load_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadButton" to="." method="_on_load_button_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load1" to="CanvasLayer/LoadMenu/Chalkboard/Load1" method="_on_mouse_entered"]
