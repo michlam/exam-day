@@ -18,6 +18,10 @@ func initialize_dialogic():
 
 
 func _on_dialogic_signal(argument: String):
-	if argument == "activate_something":
-		print("Something was activated!")
-		print(Dialogic.VAR.get('my_var_1'))
+	match argument:
+		"activate_something":
+			print("Something was activated!")
+			print(Dialogic.VAR.get('my_var_1'))
+		"change_background":
+			$CanvasLayer/Background.change_background(Dialogic.VAR.get('location'))
+	

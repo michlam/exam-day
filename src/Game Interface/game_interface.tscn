@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=7 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
+[ext_resource type="Script" path="res://src/Game Interface/background.gd" id="3_plowb"]
 
 [sub_resource type="Animation" id="Animation_0bjsw"]
 resource_name = "fade_in"
@@ -55,6 +56,7 @@ script = ExtResource("1_ht1di")
 modulate = Color(0.77, 0.77, 0.77, 1)
 position = Vector2(600, 400)
 texture = ExtResource("2_lf01c")
+script = ExtResource("3_plowb")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 1201.0

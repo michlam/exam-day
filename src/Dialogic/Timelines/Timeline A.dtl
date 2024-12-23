@@ -1,5 +1,10 @@
+[signal arg="change_background"]
 join "Main Character" left
 "Main Character": Hello hello!\
 I'm super cool!
 "Main Character": Yup, very cool.
 [signal arg="activate_something"]
+"Main Character": Moving to the lecture hall
+set {location} = "lecture"
+[signal arg="change_background"]
+"Main Character": Now in lecture hall

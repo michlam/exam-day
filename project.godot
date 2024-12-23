@@ -30,6 +30,7 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style=""
 variables={
+"location": "bedroom",
 "my_var_1": "hello! this is my_var_1!",
 "my_var_2": "goodbye! this is my_var_2"
 }
