@@ -32,7 +32,8 @@ layout/default_style=""
 variables={
 "location": "bedroom",
 "my_var_1": "hello! this is my_var_1!",
-"my_var_2": "goodbye! this is my_var_2"
+"my_var_2": "goodbye! this is my_var_2",
+"object": "alarm"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

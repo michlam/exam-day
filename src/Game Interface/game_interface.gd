@@ -4,6 +4,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimationPlayer.play("fade_in")
+	$CanvasLayer/ObjectFocus.visible = false
+	$CanvasLayer.visible = false
 	initialize_dialogic()
 
 
@@ -24,4 +26,8 @@ func _on_dialogic_signal(argument: String):
 			print(Dialogic.VAR.get('my_var_1'))
 		"change_background":
 			$CanvasLayer/Background.change_background(Dialogic.VAR.get('location'))
+		"place_object":
+			$CanvasLayer/ObjectFocus/Object.place_object(Dialogic.VAR.get('object'))
+		"remove_object":
+			$CanvasLayer/ObjectFocus/Object.remove_object()
 	

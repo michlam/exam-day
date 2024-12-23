@@ -1,7 +1,13 @@
 [signal arg="change_background"]
-join "Main Character" left
-"Main Character": Hello hello!\
-I'm super cool!
+set {object} = "alarm"
+Wakey wakey!
+[signal arg="place_object"]
+[wait time="2.0"]
+join "Main Character" left [animation="Slide In Left"]
+"Main Character": Let me just turn this off.
+[signal arg="remove_object"]
+"Main Character": Good morning!\
+I'm super cool
 "Main Character": Yup, very cool.
 [signal arg="activate_something"]
 "Main Character": Moving to the lecture hall
