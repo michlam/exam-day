@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwt7u045rjvem"
-path="res://.godot/imported/Classroom.png-329637698a56408c7715ae6ec016d36e.ctex"
+uid="uid://dyrvtn5r30fty"
+path="res://.godot/imported/Streets.png-39a63a080c2688e1168f78477ad84b5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Locations/Classroom.png"
-dest_files=["res://.godot/imported/Classroom.png-329637698a56408c7715ae6ec016d36e.ctex"]
+source_file="res://assets/Images/Locations/Streets.png"
+dest_files=["res://.godot/imported/Streets.png-39a63a080c2688e1168f78477ad84b5b.ctex"]
 
 [params]
 

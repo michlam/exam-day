@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwt7u045rjvem"
-path="res://.godot/imported/Classroom.png-329637698a56408c7715ae6ec016d36e.ctex"
+uid="uid://ciase6wby2x03"
+path="res://.godot/imported/Housefront.png-9f4cd9e52d80434e9385063cdfbb33a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Locations/Classroom.png"
-dest_files=["res://.godot/imported/Classroom.png-329637698a56408c7715ae6ec016d36e.ctex"]
+source_file="res://assets/Images/Locations/Housefront.png"
+dest_files=["res://.godot/imported/Housefront.png-9f4cd9e52d80434e9385063cdfbb33a7.ctex"]
 
 [params]
 

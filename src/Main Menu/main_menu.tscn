@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://lmc07lnau5pr"]
 
-[ext_resource type="Texture2D" uid="uid://b23vosy4wsoxi" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
+[ext_resource type="Texture2D" uid="uid://bwt7u045rjvem" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
 [ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
 [ext_resource type="Texture2D" uid="uid://6byq51sxk7qb" path="res://assets/Images/Objects/Post-it Normal.png" id="2_epdgr"]
 [ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
@@ -163,10 +163,8 @@ script = ExtResource("1_smct7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(601, 404)
-scale = Vector2(0.323378, 0.323378)
+position = Vector2(600, 400)
 texture = ExtResource("1_g75gw")
-region_enabled = true
 region_rect = Rect2(30.8105, 2216.03, 4301.38, 2643.67)
 
 [node name="StartButton" type="TextureButton" parent="CanvasLayer"]

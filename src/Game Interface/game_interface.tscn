@@ -1,6 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=6 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
+[ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
+
+[sub_resource type="Animation" id="Animation_0bjsw"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wv6go"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_74iqx"]
+_data = {
+"RESET": SubResource("Animation_wv6go"),
+"fade_in": SubResource("Animation_0bjsw")
+}
 
 [node name="Game Interface" type="Control"]
 layout_mode = 3
@@ -13,10 +51,17 @@ script = ExtResource("1_ht1di")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+modulate = Color(0.77, 0.77, 0.77, 1)
+position = Vector2(600, 400)
+texture = ExtResource("2_lf01c")
+
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
 offset_right = 1201.0
 offset_bottom = 800.0
 color = Color(0, 0, 0, 1)
 
-[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_74iqx")
+}
