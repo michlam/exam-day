@@ -1,17 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=16 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
 [ext_resource type="Script" path="res://src/Game Interface/background.gd" id="3_plowb"]
 [ext_resource type="Texture2D" uid="uid://c4531e14y5m7p" path="res://assets/Images/Objects/Alarm.png" id="4_tpr1l"]
 [ext_resource type="Script" path="res://src/Game Interface/object.gd" id="5_q7fih"]
+[ext_resource type="Texture2D" uid="uid://b7wic3ko8k5yj" path="res://assets/Images/Objects/Blackboard.png" id="6_r54p1"]
+[ext_resource type="Script" path="res://src/Game Interface/pause_menu_focus.gd" id="6_ryp6w"]
 
 [sub_resource type="Animation" id="Animation_cpsnb"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/path = NodePath("BackgroundFocus/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -23,7 +25,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/ColorRect:position")
+tracks/1/path = NodePath("BackgroundFocus/ColorRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -32,13 +34,37 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1200, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PauseMenuFocus:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PauseMenuFocus/Blackboard:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 400)]
+}
 
 [sub_resource type="Animation" id="Animation_0bjsw"]
 resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/path = NodePath("BackgroundFocus/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,7 +76,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer:visible")
+tracks/1/path = NodePath("BackgroundFocus:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -66,7 +92,7 @@ length = 1.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/path = NodePath("BackgroundFocus/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +104,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/ColorRect:position")
+tracks/1/path = NodePath("BackgroundFocus/ColorRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -90,7 +116,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/Background")
+tracks/2/path = NodePath("BackgroundFocus/Background")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -108,7 +134,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ObjectFocus/ColorRect:color")
+tracks/0/path = NodePath("BackgroundFocus/ObjectFocus/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -120,7 +146,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/ObjectFocus/Object:modulate")
+tracks/1/path = NodePath("BackgroundFocus/ObjectFocus/Object:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -132,7 +158,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/ObjectFocus:visible")
+tracks/2/path = NodePath("BackgroundFocus/ObjectFocus:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -148,7 +174,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ObjectFocus/ColorRect:color")
+tracks/0/path = NodePath("BackgroundFocus/ObjectFocus/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -160,7 +186,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/ObjectFocus/Object:modulate")
+tracks/1/path = NodePath("BackgroundFocus/ObjectFocus/Object:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -172,7 +198,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/ObjectFocus:visible")
+tracks/2/path = NodePath("BackgroundFocus/ObjectFocus:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -182,11 +208,97 @@ tracks/2/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_mfrw6"]
+resource_name = "pause_menu_toggle_on"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PauseMenuFocus:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PauseMenuFocus/Blackboard:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(600, 1200), Vector2(600, 400)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PauseMenuFocus")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"toggle_pause"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_braub"]
+resource_name = "pause_menu_toggle_off"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PauseMenuFocus:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PauseMenuFocus/Blackboard:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(600, 400), Vector2(600, 1200)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PauseMenuFocus")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"toggle_pause"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_74iqx"]
 _data = {
 "RESET": SubResource("Animation_cpsnb"),
 "fade_in": SubResource("Animation_0bjsw"),
 "location_transition": SubResource("Animation_e2nab"),
+"pause_menu_toggle_off": SubResource("Animation_braub"),
+"pause_menu_toggle_on": SubResource("Animation_mfrw6"),
 "place_object": SubResource("Animation_6xlgi"),
 "remove_object": SubResource("Animation_nkgsg")
 }
@@ -200,29 +312,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ht1di")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="BackgroundFocus" type="CanvasLayer" parent="."]
 
-[node name="Background" type="Sprite2D" parent="CanvasLayer" node_paths=PackedStringArray("ap")]
+[node name="Background" type="Sprite2D" parent="BackgroundFocus" node_paths=PackedStringArray("ap")]
 modulate = Color(0.77, 0.77, 0.77, 1)
 position = Vector2(600, 400)
 texture = ExtResource("2_lf01c")
 script = ExtResource("3_plowb")
 ap = NodePath("../../AnimationPlayer")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="BackgroundFocus"]
 offset_left = 1200.0
 offset_right = 2401.0
 offset_bottom = 800.0
 color = Color(0, 0, 0, 1)
 
-[node name="ObjectFocus" type="CanvasLayer" parent="CanvasLayer"]
+[node name="ObjectFocus" type="CanvasLayer" parent="BackgroundFocus"]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ObjectFocus"]
+[node name="ColorRect" type="ColorRect" parent="BackgroundFocus/ObjectFocus"]
 offset_right = 1200.0
 offset_bottom = 800.0
 color = Color(0, 0, 0, 0)
 
-[node name="Object" type="Sprite2D" parent="CanvasLayer/ObjectFocus" node_paths=PackedStringArray("ap")]
+[node name="Object" type="Sprite2D" parent="BackgroundFocus/ObjectFocus" node_paths=PackedStringArray("ap")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(600, 300)
 texture = ExtResource("4_tpr1l")
@@ -233,3 +345,27 @@ ap = NodePath("../../../AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_74iqx")
 }
+
+[node name="PauseMenuFocus" type="CanvasLayer" parent="." node_paths=PackedStringArray("ap")]
+process_mode = 2
+layer = 10
+script = ExtResource("6_ryp6w")
+ap = NodePath("../AnimationPlayer")
+
+[node name="Blackboard" type="Sprite2D" parent="PauseMenuFocus"]
+position = Vector2(600, 400)
+rotation = 0.00263998
+scale = Vector2(0.32766, 0.32766)
+texture = ExtResource("6_r54p1")
+
+[node name="SaveButton" type="TextureButton" parent="PauseMenuFocus/Blackboard"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LoadButton" type="TextureButton" parent="PauseMenuFocus/Blackboard"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="QuitButton" type="TextureButton" parent="PauseMenuFocus/Blackboard"]
+offset_right = 40.0
+offset_bottom = 40.0
