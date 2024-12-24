@@ -5,7 +5,6 @@ extends Control
 func _ready() -> void:
 	$AnimationPlayer.play("fade_in")
 	$CanvasLayer/ObjectFocus.visible = false
-	$CanvasLayer.visible = false
 	initialize_dialogic()
 
 
@@ -21,9 +20,6 @@ func initialize_dialogic():
 
 func _on_dialogic_signal(argument: String):
 	match argument:
-		"activate_something":
-			print("Something was activated!")
-			print(Dialogic.VAR.get('my_var_1'))
 		"change_background":
 			$CanvasLayer/Background.change_background(Dialogic.VAR.get('location'))
 		"place_object":

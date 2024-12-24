@@ -7,10 +7,11 @@ extends Sprite2D
 ##############
 const texture_dict = {
 	"alarm" = preload("res://assets/Images/Objects/Alarm.png"),
+	"pancakes" = preload("res://assets/Images/Objects/Pancakes.png")
 }
 
-func place_object(name) -> void:
-	set_texture(texture_dict[name])
+func place_object(object) -> void:
+	set_texture(texture_dict[object])
 	ap.play("place_object")
 
 

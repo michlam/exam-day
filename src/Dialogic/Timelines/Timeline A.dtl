@@ -1,16 +1,21 @@
-[signal arg="change_background"]
 set {object} = "alarm"
-Wakey wakey!
+The sound of the alarm clock wakes me up.
 [signal arg="place_object"]
-[wait time="2.0"]
-join "Main Character" left [animation="Slide In Left"]
-"Main Character": Let me just turn this off.
+[wait time="1.0"]
+join "Main Character" left [animation="Slide In Left" length="1.0"]
+[wait time="1.0"]
+"Main Character": Let me just turn this off first.
 [signal arg="remove_object"]
-"Main Character": Good morning!\
-I'm super cool
-"Main Character": Yup, very cool.
-[signal arg="activate_something"]
-"Main Character": Moving to the lecture hall
-set {location} = "lecture"
+[wait time="1.0"]
+"Main Character": There we go. Looks like I'm up nice and early for my exam today.
+"Main Character": I've still got some time left before I have to leave for school. I'll have some breakfast first.
+set {location} = "dining room"
 [signal arg="change_background"]
-"Main Character": Now in lecture hall
+"Main Character": ~~ Bacon pancakes, makin' bacon pancakes... ~~
+set {object} = "pancakes"
+[signal arg="place_object"]
+"Main Character": Mmmm, these pancakes bussin' bussin'
+"Main Character": How should I get to campus today? I could either go by bike or bus...
+- Bike | [flag_transit="bike"]
+- Bus | [flag_transit="bike"]
+"Main Character": Alright, once I finish up this breakfast I'll head out.

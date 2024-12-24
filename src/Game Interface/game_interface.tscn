@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=12 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
@@ -113,25 +113,80 @@ tracks/2/keys = {
 "values": [true, false]
 }
 
-[sub_resource type="Animation" id="Animation_qhwse"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_e2nab"]
+resource_name = "location_transition"
+length = 1.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer:visible")
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.733333, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1200, 0), Vector2(0, 0), Vector2(0, 0), Vector2(-1200, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Background")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_background_image"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cpsnb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1200, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_74iqx"]
 _data = {
-"RESET": SubResource("Animation_qhwse"),
+"RESET": SubResource("Animation_cpsnb"),
 "fade_in": SubResource("Animation_0bjsw"),
+"location_transition": SubResource("Animation_e2nab"),
 "place_object": SubResource("Animation_6xlgi"),
 "remove_object": SubResource("Animation_nkgsg")
 }
@@ -147,14 +202,16 @@ script = ExtResource("1_ht1di")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+[node name="Background" type="Sprite2D" parent="CanvasLayer" node_paths=PackedStringArray("ap")]
 modulate = Color(0.77, 0.77, 0.77, 1)
 position = Vector2(600, 400)
 texture = ExtResource("2_lf01c")
 script = ExtResource("3_plowb")
+ap = NodePath("../../AnimationPlayer")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1201.0
+offset_left = 1200.0
+offset_right = 2401.0
 offset_bottom = 800.0
 color = Color(0, 0, 0, 1)
 
