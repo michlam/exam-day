@@ -26,7 +26,3 @@ func _on_dialogic_signal(argument: String):
 			$BackgroundFocus/ObjectFocus/Object.place_object(Dialogic.VAR.get('object'))
 		"remove_object":
 			$BackgroundFocus/ObjectFocus/Object.remove_object()
-
-func _input(event):
-	if event.is_action_pressed("escape"):
-		$PauseMenuFocus.toggle()
