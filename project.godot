@@ -24,6 +24,7 @@ directories/dch_directory={
 "Main Character": "res://src/Dialogic/Characters/Main Character.dch"
 }
 directories/dtl_directory={
+"Main Menu": "res://src/Dialogic/Timelines/Main Menu.dtl",
 "Timeline A": "res://src/Dialogic/Timelines/Timeline A.dtl"
 }
 glossary/default_case_sensitive=true

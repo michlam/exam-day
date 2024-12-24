@@ -1,5 +1,6 @@
 extends Control
 
+@onready var main_node = get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,3 +27,15 @@ func _on_dialogic_signal(argument: String):
 			$BackgroundFocus/ObjectFocus/Object.place_object(Dialogic.VAR.get('object'))
 		"remove_object":
 			$BackgroundFocus/ObjectFocus/Object.remove_object()
+
+
+func _on_quit_button_pressed() -> void:
+	$PauseMenuFocus.toggle()
+	Dialogic.current_timeline = null
+	Dialogic.start("Main Menu")
+		
+	var main_menu_scene = load("res://src/Main Menu/main_menu.tscn")
+	var main_menu_instance = main_menu_scene.instantiate()
+	main_node.add_child(main_menu_instance)
+	
+	queue_free()

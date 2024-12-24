@@ -1,8 +1,7 @@
 extends Control
 
 @onready var main_node = get_parent()
-
-var game_interface_scene = preload("res://src/Game Interface/game_interface.tscn")
+@onready var game_interface_scene = preload("res://src/Game Interface/game_interface.tscn")
 
 func _on_load_button_pressed() -> void:
 	$CanvasLayer/LoadMenu.visible = true
