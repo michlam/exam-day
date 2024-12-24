@@ -11,11 +11,15 @@ join "Main Character" left [animation="Slide In Left" length="1.0"]
 "Main Character": I've still got some time left before I have to leave for school. I'll have some breakfast first.
 set {location} = "dining room"
 [signal arg="change_background"]
+[wait time="2.0"]
 "Main Character": ~~ Bacon pancakes, makin' bacon pancakes... ~~
 set {object} = "pancakes"
 [signal arg="place_object"]
+[wait time="1.0"]
 "Main Character": Mmmm, these pancakes bussin' bussin'
 "Main Character": How should I get to campus today? I could either go by bike or bus...
-- Bike | [flag_transit="bike"]
-- Bus | [flag_transit="bike"]
-"Main Character": Alright, once I finish up this breakfast I'll head out.
+- Bike
+	set {FLAGS.transit} = "bike"
+- Bus
+	set {FLAGS.transit} = "bus"
+"Main Character": Alright, once I finish up this breakfast I'll head out by {FLAGS.transit}.
