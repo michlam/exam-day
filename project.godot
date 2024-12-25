@@ -25,7 +25,9 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Main Menu": "res://src/Dialogic/Timelines/Main Menu.dtl",
-"Timeline A": "res://src/Dialogic/Timelines/Timeline A.dtl"
+"Timeline A": "res://src/Dialogic/Timelines/Timeline A.dtl",
+"Timeline Bike": "res://src/Dialogic/Timelines/Timeline Bike.dtl",
+"Timeline Bus": "res://src/Dialogic/Timelines/Timeline Bus.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]

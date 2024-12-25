@@ -27,6 +27,18 @@ func _on_dialogic_signal(argument: String):
 			$BackgroundFocus/ObjectFocus/Object.place_object(Dialogic.VAR.get('object'))
 		"remove_object":
 			$BackgroundFocus/ObjectFocus/Object.remove_object()
+		"start_timeline_b":
+			start_timeline_b()
+
+func start_timeline_b():
+	if Dialogic.VAR.FLAGS.get('transit') == "bus":
+		Dialogic.start("Timeline Bus")
+	
+	if Dialogic.VAR.FLAGS.get('transit') == "bike":
+		Dialogic.start("Timeline Bike")
+	
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	get_viewport().set_input_as_handled()
 
 
 func _on_quit_button_pressed() -> void:

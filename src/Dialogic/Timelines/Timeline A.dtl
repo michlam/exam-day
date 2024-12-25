@@ -24,7 +24,7 @@ set {object} = "pancakes"
 [wait time="1.0"]
 set {location} = "housefront"
 [signal arg="change_background"]
-"Main Character": Alright, time to go to campus. 
+"Main Character": Alright, time to go to campus.
 "Main Character": I wonder how I should get there...
 "Main Character": Commuting by bus would probably be faster, unless there's a traffic jam.
 "Main Character": On the other hand, biking would avoid any traffic, but I won't have any extra time to study left after getting to campus.
@@ -33,3 +33,5 @@ set {location} = "housefront"
 	set {FLAGS.transit} = "bus"
 - Take my bike
 	set {FLAGS.transit} = "bike"
+[signal arg="start_timeline_b"]
+[end_timeline]
