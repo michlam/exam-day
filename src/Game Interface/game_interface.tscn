@@ -500,6 +500,7 @@ texture_normal = ExtResource("13_2q354")
 script = ExtResource("14_ggbdp")
 
 [node name="Label" type="Label" parent="PauseMenuFocus/Blackboard/QuitButton"]
+layout_mode = 0
 offset_left = 273.939
 offset_top = 41.1227
 offset_right = 642.939

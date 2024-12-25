@@ -17,9 +17,19 @@ set {object} = "pancakes"
 [signal arg="place_object"]
 [wait time="1.0"]
 "Main Character": Mmmm, these pancakes bussin' bussin'
-"Main Character": How should I get to campus today? I could either go by bike or bus...
-- Bike
-	set {FLAGS.transit} = "bike"
-- Bus
+"Main Character": I didn't study too much for this exam. I hope it isn't too hard, I need to pass this course to graduate.
+"Main Character": Alright, once I finish up this breakfast I'll head out.
+[wait time="1.0"]
+[signal arg="remove_object"]
+[wait time="1.0"]
+set {location} = "housefront"
+[signal arg="change_background"]
+"Main Character": Alright, time to go to campus. 
+"Main Character": I wonder how I should get there...
+"Main Character": Commuting by bus would probably be faster, unless there's a traffic jam.
+"Main Character": On the other hand, biking would avoid any traffic, but I won't have any extra time to study left after getting to campus.
+"Main Character": What to choose...
+- Take the bus
 	set {FLAGS.transit} = "bus"
-"Main Character": Alright, once I finish up this breakfast I'll head out by {FLAGS.transit}.
+- Take my bike
+	set {FLAGS.transit} = "bike"
