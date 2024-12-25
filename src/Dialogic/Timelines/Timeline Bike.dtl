@@ -1,1 +1,56 @@
 "Main Character": I guess I'll commute to school by bike today. It'll be good way to get my physical activity in today.
+set {location} = "streets"
+[signal arg="change_background"]
+[wait time="1.0"]
+As I bike through the city, the early morning streets are quiet and mostly empty.
+The only faces that can be seen are those of tired office workers returning from another night shift.
+set {location} = "traffic"
+[signal arg="change_background"]
+[wait time="1.0"]
+As I turn into the main street, the road is carpeted by vehicles stuck in a gridlock as far as the eyes can see.
+"Main Character": Whoa, there's so much traffic today. Was there an accident?
+"Main Character": It's a good thing I didn't choose to take the bus. I probably would have been late for sure!
+set {location} = "campus"
+[signal arg="change_background"]
+[wait time="1.0"]
+I get to campus exhausted, but with ample time to get to the exam hall without rushing.
+Unlike the city streets, campus is already bustling with people.
+"Main Character": I guess everyone has exams right now. There's almost as many people here as during regular classes.
+set {location} = "hallway"
+[signal arg="change_background"]
+[wait time="1.0"]
+The hallway to the exam room is packed with nervous students frantically doing their last minute cramming.
+Suddenly, a voice rings out from behind me.
+[wait time="0.5"]
+join Jimmy right [animation="Slide In Right" length="1.0"]
+Jimmy: Gang gang! Are you ready for the exam?
+"Main Character": Oh hi Jimmy. Not really, I spent the whole night playing video games instead of studying.
+Jimmy: Oh wow, that's not very cool. Are you not going to do some last second studying?
+"Main Character": I don't think any amount of cramming would do me any good at this point. I just hope the exam questions won't be too hard.
+Our conversation continues until our professor props open the door to the exam room, signalling for the students to enter the room.
+Jimmy: Well, I guess it's time to head inside. Good luck!
+"Main Character": Yup, good luck Jimmy.
+leave Jimmy [animation="Slide Out Left" length="1.0"]
+I follow the stream of students into the exam room.
+set {location} = "classroom"
+[signal arg="change_background"]
+[wait time="1.0"]
+As I enter the exam room, I hear my professor calling out instructions to the entire class.
+join Professor right [animation="Fade In" length="1.0"]
+Professor: Please take a seat in front of one of the examination papers.
+Professor: There are three different examination papers with different questions. These versions are marked A, B, and C.
+leave Professor [animation="Fade Out" length="1.0"]
+I look around the room, deciding on where to sit. There's still plenty of seats of every exam booklet.
+"Main Character": Hmm.. I wonder which seat I should choose...
+- Seat with exam booklet A
+	set {FLAGS.exam} = "a"
+- Seat with exam booklet B
+	set {FLAGS.exam} = "b"
+- Seat with exam booklet C
+	set {FLAGS.exam} = "c"
+set {location} = "lecture"
+[signal arg="change_background"]
+[wait time="1.0"]
+I settle myself down by a table with an exam booklet, and wait for the test to start.
+[signal arg="start_timeline_c"]
+[end_timeline]

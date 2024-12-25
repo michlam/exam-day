@@ -29,6 +29,8 @@ func _on_dialogic_signal(argument: String):
 			$BackgroundFocus/ObjectFocus/Object.remove_object()
 		"start_timeline_b":
 			start_timeline_b()
+		"start_timeline_c":
+			start_timeline_c()
 
 func start_timeline_b():
 	if Dialogic.VAR.FLAGS.get('transit') == "bus":
@@ -39,6 +41,9 @@ func start_timeline_b():
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	get_viewport().set_input_as_handled()
+
+func start_timeline_c():
+	pass
 
 
 func _on_quit_button_pressed() -> void:

@@ -9,15 +9,15 @@
 "style": ""
 },
 "default_portrait": "Default",
-"description": "A cool bean.",
-"display_name": "Me",
-"mirror": false,
-"nicknames": ["Bean"],
-"offset": Vector2(-150, -250),
+"description": "",
+"display_name": "Jimmy",
+"mirror": true,
+"nicknames": [""],
+"offset": Vector2(125, -165),
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://assets/Images/Characters/Temp Avatar.png\""
+"image": "\"res://assets/Images/Characters/Jimmy Avatar.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -25,5 +25,5 @@
 "scene": ""
 }
 },
-"scale": 0.5
+"scale": 0.75
 }

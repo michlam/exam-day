@@ -21,7 +21,9 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Main Character": "res://src/Dialogic/Characters/Main Character.dch"
+"Jimmy": "res://src/Dialogic/Characters/Jimmy.dch",
+"Main Character": "res://src/Dialogic/Characters/Main Character.dch",
+"Professor": "res://assets/Images/Characters/Professor.dch"
 }
 directories/dtl_directory={
 "Main Menu": "res://src/Dialogic/Timelines/Main Menu.dtl",
@@ -34,6 +36,7 @@ layout/style_list=[]
 layout/default_style=""
 variables={
 "FLAGS": {
+"exam": "",
 "transit": ""
 },
 "location": "bedroom",

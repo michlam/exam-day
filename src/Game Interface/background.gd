@@ -14,7 +14,8 @@ const texture_dict = {
 	"hallway" = preload("res://assets/Images/Locations/Hallway.png"),
 	"housefront" = preload("res://assets/Images/Locations/Housefront.png"),
 	"lecture" = preload("res://assets/Images/Locations/Lecture.png"),
-	"streets" = preload("res://assets/Images/Locations/Streets.png")
+	"streets" = preload("res://assets/Images/Locations/Streets.png"),
+	"traffic" = preload("res://assets/Images/Locations/Traffic.png")
 }
 
 
