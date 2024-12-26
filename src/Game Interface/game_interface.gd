@@ -42,7 +42,6 @@ func start_timeline_b():
 	if Dialogic.VAR.FLAGS.get('transit') == "bike":
 		Dialogic.start("Timeline Bike")
 	
-	Dialogic.signal_event.connect(_on_dialogic_signal)
 	get_viewport().set_input_as_handled()
 
 
@@ -55,16 +54,10 @@ func start_timeline_c():
 
 	if Dialogic.VAR.FLAGS.get('exam') == "c":
 		Dialogic.start("Timeline Exam C")
-		
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-	get_viewport().set_input_as_handled()
 
 
 func start_timeline_d():
 	Dialogic.start("Timeline Ending")
-
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-	get_viewport().set_input_as_handled()
 
 
 func _on_quit_button_pressed() -> void:

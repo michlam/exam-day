@@ -8,6 +8,7 @@ var current_background = "bedroom"
 ##############
 const texture_dict = {
 	"bedroom" = preload("res://assets/Images/Locations/Bedroom.png"),
+	"bus" = preload("res://assets/Images/Locations/Bus.png"),
 	"campus" = preload("res://assets/Images/Locations/Campus.png"),
 	"classroom" = preload("res://assets/Images/Locations/Classroom.png"),
 	"dining room" = preload("res://assets/Images/Locations/Dining Room.png"),

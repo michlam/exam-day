@@ -1,1 +1,19 @@
 "Main Character": I guess I'll commute to school by bus today. Traffic shouldn't be too bad right now.
+set {location} = "bus"
+[signal arg="change_background"]
+[wait time="1.0"]
+The bus comes a little earlier than usual, with fewer people than what is typical this time.
+"Main Character": Perhaps everyone is driving today? It's a good thing for me though, I get a nice seat today.
+I make myself comfortable, taking in the quiet cityscape through the window on my right.
+set {location} = "traffic"
+[signal arg="change_background"]
+[wait time="1.0"]
+It's not long before we grind to a halt at the main road.
+Rearing my head to take a peek at the front windshield, the streets are carpeted with vehicles as far as the eye can see.
+"Main Character": Man, of course today's the day for there to be so much traffic in the morning.
+"Main Character": Welp, looks like I'm going to be late for my exam. Let's just hope there's enough time to complete it.
+set {location} = "campus"
+[signal arg="change_background"]
+[wait time="1.0"]
+As the bus rounds the campus station, I don't even stop to thank the driver as I rush off towards my exam room.
+My head races, hoping that my tardiness won't prevent me from being able to take the exam at all.
