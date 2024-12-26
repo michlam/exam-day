@@ -1,0 +1,7 @@
+I circle in the last answer just in time before the professor alerts the class.
+[signal arg="remove_object"]
+[wait time="1.0"]
+join Professor right [animation="Fade In"]
+Professor: Pencils down everyone! The exam has ended!
+leave Professor [animation="Fade Out"]
+As all the students go through the process of handing in their exams, I wonder if I had answered all the questions correctly.

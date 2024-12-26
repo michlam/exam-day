@@ -40,3 +40,5 @@ Who is the G.O.A.T.?
 - Lebron James
 	set {FLAGS.EXAM_A.q3} = "Lebron James"
 "Main Character": Oh yeah, no doubt the G.O.A.T. is {FLAGS.EXAM_A.q3}.
+[signal arg="start_timeline_d"]
+[end_timeline]

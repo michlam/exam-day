@@ -1,0 +1,43 @@
+set {object} = "exam b"
+[signal arg="place_object"]
+[wait time="1.0"]
+join Professor right [animation="Fade In"]
+Professor: Alright everyone. You can start the exam now. Good luck!
+leave Professor [animation="Fade Out"]
+leave "Main Character" [animation="Fade Out"]
+[wait time="1.0"]
+"Main Character": Ok, question one.
+Who is the best duo of all time?
+- Naruto and Sasuke
+	set {FLAGS.EXAM_B.q1} = "Naruto and Sasuke"
+- Jimmy and Harvir
+	set {FLAGS.EXAM_B.q1} = "Jimmy and Harvir"
+- Kobe and Shaq
+	set {FLAGS.EXAM_B.q1} = "Kobe and Shaq"
+- Jordan and Pippen
+	set {FLAGS.EXAM_B.q1} = "Jordan and Pippen"
+"Main Character": Is there a more dynamic duo than {FLAGS.EXAM_B.q1}?
+"Main Character": Alright, next question.
+What is Biggie B's real name?
+- Bowen
+	set {FLAGS.EXAM_B.q2} = "Bowen"
+- Bruce
+	set {FLAGS.EXAM_B.q2} = "Bruce"
+- Brad
+	set {FLAGS.EXAM_B.q2} = "Brad"
+- Brandon
+	set {FLAGS.EXAM_B.q2} = "Brandon"
+"Main Character": This one's obvious. Biggie B is {FLAGS.EXAM_B.q2}.
+"Main Character": And finally, one last question.
+Who's the coolest character from Arcane?
+- Jinx
+	set {FLAGS.EXAM_B.q3} = "Jinx"
+- Caitlyn
+	set {FLAGS.EXAM_B.q3} = "Caitlyn"
+- Vi
+	set {FLAGS.EXAM_B.q3} = "Vi"
+- Steb
+	set {FLAGS.EXAM_B.q3} = "Steb"
+"Main Character": {FLAGS.EXAM_B.q3} is by far the coolest character from Arcane.
+[signal arg="start_timeline_d"]
+[end_timeline]

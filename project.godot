@@ -30,7 +30,9 @@ directories/dtl_directory={
 "Timeline A": "res://src/Dialogic/Timelines/Timeline A.dtl",
 "Timeline Bike": "res://src/Dialogic/Timelines/Timeline Bike.dtl",
 "Timeline Bus": "res://src/Dialogic/Timelines/Timeline Bus.dtl",
-"Timeline Exam A": "res://src/Dialogic/Timelines/Timeline Exam A.dtl"
+"Timeline Ending": "res://src/Dialogic/Timelines/Timeline Ending.dtl",
+"Timeline Exam A": "res://src/Dialogic/Timelines/Timeline Exam A.dtl",
+"Timeline Exam B": "res://src/Dialogic/Timelines/Timeline Exam B.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
@@ -41,6 +43,14 @@ variables={
 "a1": "EX-ARM",
 "a2": "Genshin Impact",
 "a3": "Scottie Barnes",
+"q1": "",
+"q2": "",
+"q3": ""
+},
+"EXAM_B": {
+"a1": "Jimmy and Harvir",
+"a2": "Brad",
+"a3": "",
 "q1": "",
 "q2": "",
 "q3": ""
