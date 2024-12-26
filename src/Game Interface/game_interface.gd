@@ -32,6 +32,7 @@ func _on_dialogic_signal(argument: String):
 		"start_timeline_c":
 			start_timeline_c()
 
+
 func start_timeline_b():
 	if Dialogic.VAR.FLAGS.get('transit') == "bus":
 		Dialogic.start("Timeline Bus")
@@ -42,8 +43,16 @@ func start_timeline_b():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	get_viewport().set_input_as_handled()
 
+
 func start_timeline_c():
-	pass
+	if Dialogic.VAR.FLAGS.get('exam') == "a":
+		Dialogic.start("Timeline Exam A")
+
+	if Dialogic.VAR.FLAGS.get('exam') == "b":
+		Dialogic.start("Timeline Exam B")
+
+	if Dialogic.VAR.FLAGS.get('exam') == "c":
+		Dialogic.start("Timeline Exam C")
 
 
 func _on_quit_button_pressed() -> void:

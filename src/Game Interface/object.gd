@@ -7,6 +7,7 @@ extends Sprite2D
 ##############
 const texture_dict = {
 	"alarm" = preload("res://assets/Images/Objects/Alarm.png"),
+	"exam a" = preload("res://assets/Images/Objects/Exam A.png"),
 	"pancakes" = preload("res://assets/Images/Objects/Pancakes.png")
 }
 

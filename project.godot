@@ -29,13 +29,22 @@ directories/dtl_directory={
 "Main Menu": "res://src/Dialogic/Timelines/Main Menu.dtl",
 "Timeline A": "res://src/Dialogic/Timelines/Timeline A.dtl",
 "Timeline Bike": "res://src/Dialogic/Timelines/Timeline Bike.dtl",
-"Timeline Bus": "res://src/Dialogic/Timelines/Timeline Bus.dtl"
+"Timeline Bus": "res://src/Dialogic/Timelines/Timeline Bus.dtl",
+"Timeline Exam A": "res://src/Dialogic/Timelines/Timeline Exam A.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style=""
 variables={
 "FLAGS": {
+"EXAM_A": {
+"a1": "EX-ARM",
+"a2": "Genshin Impact",
+"a3": "Scottie Barnes",
+"q1": "",
+"q2": "",
+"q3": ""
+},
 "exam": "",
 "transit": ""
 },
