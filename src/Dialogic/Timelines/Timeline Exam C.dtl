@@ -1,9 +1,10 @@
 set {object} = "exam c"
 [signal arg="place_object"]
 [wait time="1.0"]
-join Professor right [animation="Fade In"]
-Professor: Alright everyone. You can start the exam now. Good luck!
-leave Professor [animation="Fade Out"]
+if {FLAGS.transit} == "bike":
+	join Professor right [animation="Fade In"]
+	Professor: Alright everyone. You can start the exam now. Good luck!
+	leave Professor [animation="Fade Out"]
 leave "Main Character" [animation="Fade Out"]
 [wait time="1.0"]
 "Main Character": Ok, question one.
