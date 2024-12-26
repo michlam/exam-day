@@ -32,7 +32,8 @@ directories/dtl_directory={
 "Timeline Bus": "res://src/Dialogic/Timelines/Timeline Bus.dtl",
 "Timeline Ending": "res://src/Dialogic/Timelines/Timeline Ending.dtl",
 "Timeline Exam A": "res://src/Dialogic/Timelines/Timeline Exam A.dtl",
-"Timeline Exam B": "res://src/Dialogic/Timelines/Timeline Exam B.dtl"
+"Timeline Exam B": "res://src/Dialogic/Timelines/Timeline Exam B.dtl",
+"Timeline Exam C": "res://src/Dialogic/Timelines/Timeline Exam C.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
@@ -50,7 +51,15 @@ variables={
 "EXAM_B": {
 "a1": "Jimmy and Harvir",
 "a2": "Brad",
-"a3": "",
+"a3": "Steb",
+"q1": "",
+"q2": "",
+"q3": ""
+},
+"EXAM_C": {
+"a1": "Gambling",
+"a2": "Vayne",
+"a3": "Swarm",
 "q1": "",
 "q2": "",
 "q3": ""

@@ -1,0 +1,43 @@
+set {object} = "exam c"
+[signal arg="place_object"]
+[wait time="1.0"]
+join Professor right [animation="Fade In"]
+Professor: Alright everyone. You can start the exam now. Good luck!
+leave Professor [animation="Fade Out"]
+leave "Main Character" [animation="Fade Out"]
+[wait time="1.0"]
+"Main Character": Ok, question one.
+What is the best way to make a gazillion dollars?
+- Gambling
+	set {FLAGS.EXAM_C.q1} = "Gambling"
+- Working
+	set {FLAGS.EXAM_C.q1} = "Working"
+- Robbing a bank
+	set {FLAGS.EXAM_C.q1} = "Robbing a bank"
+- Commiting tax fraud
+	set {FLAGS.EXAM_C.q1} = "Committing tax fraud"
+"Main Character": {FLAGS.EXAM_C.q1} is for sure the best way to make the big bucks.
+"Main Character": Alright, next question.
+Which of these is NOT a Michael champion?
+- Ornn
+	set {FLAGS.EXAM_C.q2} = "Ornn"
+- Vayne
+	set {FLAGS.EXAM_C.q2} = "Vayne"
+- Taliyah
+	set {FLAGS.EXAM_C.q2} = "Taliyah"
+- Viktor
+	set {FLAGS.EXAM_C.q2} = "Viktor"
+"Main Character": Of course, everything other than {FLAGS.EXAM_C.q2} is a Michael champ.
+"Main Character": And finally, one last question.
+What's the best gamemode in League of Legends?
+- Summoner's Rift
+	set {FLAGS.EXAM_C.q3} = "Summoner's Rift"
+- ARAM
+	set {FLAGS.EXAM_C.q3} = "ARAM"
+- Swarm
+	set {FLAGS.EXAM_C.q3} = "Swarm"
+- URF
+	set {FLAGS.EXAM_C.q3} = "URF"
+"Main Character": {FLAGS.EXAM_C.q3} is the best League of Legends gamemode without a doubt.
+[signal arg="start_timeline_d"]
+[end_timeline]
