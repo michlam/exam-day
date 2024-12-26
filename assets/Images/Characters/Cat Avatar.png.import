@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuiem308nqu3y"
-path="res://.godot/imported/Temp Avatar.png-cc5c2845d5f658203ea858bf4a2c6c6e.ctex"
+uid="uid://dwd37av8jkv02"
+path="res://.godot/imported/Cat Avatar.png-bbedae15d78e7738e9bb6f58560a028f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Characters/Temp Avatar.png"
-dest_files=["res://.godot/imported/Temp Avatar.png-cc5c2845d5f658203ea858bf4a2c6c6e.ctex"]
+source_file="res://assets/Images/Characters/Cat Avatar.png"
+dest_files=["res://.godot/imported/Cat Avatar.png-bbedae15d78e7738e9bb6f58560a028f.ctex"]
 
 [params]
 

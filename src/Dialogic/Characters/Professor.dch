@@ -13,7 +13,7 @@
 "display_name": "Professor",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(150, 75),
+"offset": Vector2(150, 90),
 "portraits": {
 "Default": {
 "export_overrides": {

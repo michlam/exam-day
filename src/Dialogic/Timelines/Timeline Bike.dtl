@@ -28,7 +28,7 @@ Jimmy: Gang gang! Are you ready for the exam?
 Jimmy: Oh wow, that's not very cool. Are you not going to do some last second studying?
 "Main Character": I don't think any amount of cramming would do me any good at this point. I just hope the exam questions won't be too hard.
 Our conversation continues until our professor props open the door to the exam room, signalling for the students to enter the room.
-Jimmy: Well, I guess it's time to head inside. Good luck!
+Jimmy: Well, looks like it's test time. Gang gang!
 "Main Character": Yup, good luck Jimmy.
 leave Jimmy [animation="Slide Out Left" length="1.0"]
 I follow the stream of students into the exam room.

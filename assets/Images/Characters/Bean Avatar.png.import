@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwd37av8jkv02"
-path="res://.godot/imported/Jimmy Avatar.png-b8f43e755e9fd7e682142e506886cb87.ctex"
+uid="uid://cuiem308nqu3y"
+path="res://.godot/imported/Bean Avatar.png-4f16d93579bf348e18accca863bee889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Characters/Jimmy Avatar.png"
-dest_files=["res://.godot/imported/Jimmy Avatar.png-b8f43e755e9fd7e682142e506886cb87.ctex"]
+source_file="res://assets/Images/Characters/Bean Avatar.png"
+dest_files=["res://.godot/imported/Bean Avatar.png-4f16d93579bf348e18accca863bee889.ctex"]
 
 [params]
 

@@ -23,7 +23,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Jimmy": "res://src/Dialogic/Characters/Jimmy.dch",
 "Main Character": "res://src/Dialogic/Characters/Main Character.dch",
-"Professor": "res://assets/Images/Characters/Professor.dch"
+"Professor": "res://src/Dialogic/Characters/Professor.dch"
 }
 directories/dtl_directory={
 "Main Menu": "res://src/Dialogic/Timelines/Main Menu.dtl",
