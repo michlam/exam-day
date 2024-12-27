@@ -35,6 +35,8 @@ func set_tween_length(audio):
 		return 0
 	if audio == "traffic":
 		return 0.25
+	if audio == "notification":
+		return 0
 	
 	return 1
 
@@ -53,6 +55,8 @@ func set_volume(audio):
 	if audio == "ambience":
 		return -10
 	if audio == "bike":
+		return 0
+	if audio == "notification":
 		return 0
 		
 	return 8

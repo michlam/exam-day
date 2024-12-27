@@ -15,7 +15,7 @@ set {sfx} = "traffic"
 [wait time="2.0"]
 [signal arg="stop_sfx"]
 It's not long before we grind to a halt at the main road.
-Rearing my head to take a peek at the front windshield, the streets are carpeted with vehicles as far as the eye can see.
+Rearing my head to take a peek through the front windshield, the streets are carpeted with vehicles as far as the eye can see.
 "Main Character": Man, of course today's the day for there to be so much traffic in the morning.
 "Main Character": Welp, looks like I'm going to be late for my exam. Let's just hope I'm not so late I miss the exam entirely.
 set {location} = "campus"
