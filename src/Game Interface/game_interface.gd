@@ -27,6 +27,14 @@ func _on_dialogic_signal(argument: String):
 			$BackgroundFocus/ObjectFocus/Object.place_object(Dialogic.VAR.get('object'))
 		"remove_object":
 			$BackgroundFocus/ObjectFocus/Object.remove_object()
+		"play_bgm":
+			$BGMPlayer.play_bgm(Dialogic.VAR.get('bgm'))
+		"stop_bgm":
+			$BGMPlayer.stop_bgm()
+		"play_sfx":
+			$SFXPlayer.play_sfx(Dialogic.VAR.get('sfx'))
+		"stop_sfx":
+			$SFXPlayer.stop_sfx()
 		"start_timeline_b":
 			start_timeline_b()
 		"start_timeline_c":

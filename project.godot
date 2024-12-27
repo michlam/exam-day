@@ -67,8 +67,10 @@ variables={
 "exam": "",
 "transit": ""
 },
+"bgm": "bgm_1",
 "location": "bedroom",
-"object": "alarm"
+"object": "alarm",
+"sfx": "alarm clock"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

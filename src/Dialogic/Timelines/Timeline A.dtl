@@ -1,12 +1,17 @@
 set {object} = "alarm"
+set {sfx} = "alarm clock"
 The sound of the alarm clock wakes me up.
+[signal arg="play_sfx"]
 [signal arg="place_object"]
 [wait time="1.0"]
 join "Main Character" left [animation="Slide In Left" length="1.0"]
 [wait time="1.0"]
 "Main Character": Let me just turn this off first.
 [signal arg="remove_object"]
+[signal arg="stop_sfx"]
 [wait time="1.0"]
+set {bgm} = "bgm_1"
+[signal arg="play_bgm"]
 "Main Character": There we go. Looks like I'm up nice and early for my exam today.
 "Main Character": I've still got some time left before I have to leave for school. I'll have some breakfast first.
 set {location} = "dining room"
