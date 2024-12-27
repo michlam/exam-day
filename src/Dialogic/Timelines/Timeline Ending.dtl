@@ -5,3 +5,9 @@ join Professor right [animation="Fade In"]
 Professor: Pencils down everyone! The exam has ended!
 leave Professor [animation="Fade Out"]
 As all the students go through the process of handing in their exams, I wonder if I had answered all the questions correctly.
+For a moment, I thought it might not have been a good idea to play League of Legends until 3 a.m.
+"Main Character": Well, there's no use worrying about it now. Time to go home and play some Genshin Impact.
+set {location} = "bedroom"
+[signal arg="change_background"]
+[wait time="1.0"]
+I wake up the next morning to a phone notification.

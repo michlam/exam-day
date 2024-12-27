@@ -13,6 +13,7 @@ const audio_dict = {
 	"cutlery" = preload("res://assets/Audio/SFX/Cutlery.wav"),
 	"footsteps 1" = preload("res://assets/Audio/SFX/Footsteps 1.wav"),
 	"footsteps 2" = preload("res://assets/Audio/SFX/Footsteps 2.wav"),
+	"notification" = preload("res://assets/Audio/SFX/Notification.ogg"),
 	"traffic" = preload("res://assets/Audio/SFX/Traffic.wav")
 }
 
