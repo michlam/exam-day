@@ -6,7 +6,8 @@ Jimmy: The exam marks are out, I smurfed!
 Jimmy: Yeah I know, I'm the best. Alright, time to go play some Brawl Stars.
 set {FLAGS.phone_enabled} = false
 [signal arg="phone_toggle_off"]
-[wait time="1.5"]
+[wait time="0.5"]
 I get up out of bed to check my exam score.
+set {pause_disabled} = true
 [signal arg="end_scene"]
 [end_timeline]

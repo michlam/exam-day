@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=41 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c7u4v2vt2gbkr" path="res://assets/Images/Objects/Label_Blue.png" id="8_57p1u"]
 [ext_resource type="Script" path="res://src/Game Interface/report_card.gd" id="9_5ou05"]
 [ext_resource type="Script" path="res://src/Game Interface/save_button.gd" id="9_m2lua"]
+[ext_resource type="Texture2D" uid="uid://c2pvhnysbqtdg" path="res://assets/Images/Objects/Report_0.png" id="9_ug5su"]
 [ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="10_s3tc4"]
 [ext_resource type="Texture2D" uid="uid://7v2qe5mckor3" path="res://assets/Images/Objects/Label_Green.png" id="11_b8i0g"]
 [ext_resource type="Script" path="res://src/Game Interface/load_button.gd" id="12_mdgr3"]
@@ -95,6 +96,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("EndSceneFocus/ReportCard:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_0bjsw"]
@@ -372,6 +385,33 @@ tracks/1/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_riqib"]
+resource_name = "show_report_card"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndSceneFocus/ReportCard:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EndSceneFocus/ReportCard:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_74iqx"]
 _data = {
 "RESET": SubResource("Animation_cpsnb"),
@@ -382,7 +422,8 @@ _data = {
 "phone_toggle_off": SubResource("Animation_nu4w0"),
 "phone_toggle_on": SubResource("Animation_3n4ag"),
 "place_object": SubResource("Animation_6xlgi"),
-"remove_object": SubResource("Animation_nkgsg")
+"remove_object": SubResource("Animation_nkgsg"),
+"show_report_card": SubResource("Animation_riqib")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_mnflp"]
@@ -553,6 +594,9 @@ texture = ExtResource("17_oa1vd")
 [node name="EndSceneFocus" type="CanvasLayer" parent="."]
 
 [node name="ReportCard" type="Sprite2D" parent="EndSceneFocus" node_paths=PackedStringArray("ap")]
+position = Vector2(590, 382)
+scale = Vector2(0.324, 0.324)
+texture = ExtResource("9_ug5su")
 script = ExtResource("9_5ou05")
 ap = NodePath("../../AnimationPlayer")
 

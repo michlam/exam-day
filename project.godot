@@ -72,6 +72,7 @@ variables={
 "bgm": "bgm_1",
 "location": "bedroom",
 "object": "alarm",
+"pause_disabled": false,
 "sfx": "alarm clock"
 }
 extensions_folder="res://addons/dialogic_additions"

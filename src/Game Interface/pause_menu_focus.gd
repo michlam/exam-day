@@ -14,10 +14,11 @@ func _input(event):
 		toggle()
 
 func toggle():
-	if !Dialogic.paused:
+	if !visible:
 		pap.play("pause_menu_toggle_on")
-	elif Dialogic.paused:
+	elif visible:
 		pap.play("pause_menu_toggle_off")
-		
-	Dialogic.paused = !Dialogic.paused
+	
+	if !Dialogic.VAR.get('pause_disabled'):
+		Dialogic.paused = !Dialogic.paused
 	
