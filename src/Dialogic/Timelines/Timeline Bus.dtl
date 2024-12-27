@@ -1,8 +1,11 @@
 "Main Character": I guess I'll commute to school by bus today. Traffic shouldn't be too bad right now.
+set {sfx} = "bus"
+[signal arg="play_sfx"]
 set {location} = "bus"
 [signal arg="change_background"]
-[wait time="1.0"]
+[wait time="2.0"]
 The bus comes a little earlier than usual, with fewer people than what is typical at this time.
+[signal arg="stop_sfx"]
 "Main Character": Perhaps everyone is driving today? It's a good thing for me though, I get a nice seat today.
 I make myself comfortable, taking in the quiet cityscape through the window on my right.
 set {location} = "traffic"
