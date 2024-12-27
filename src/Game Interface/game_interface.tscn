@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=56 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
@@ -22,6 +22,155 @@
 [ext_resource type="Script" path="res://src/Game Interface/bgm_player.gd" id="16_6rhim"]
 [ext_resource type="Script" path="res://src/Game Interface/phone.gd" id="16_52wnt"]
 [ext_resource type="Texture2D" uid="uid://cuiem308nqu3y" path="res://assets/Images/Characters/Bean Avatar.png" id="17_oa1vd"]
+[ext_resource type="Texture2D" uid="uid://6byq51sxk7qb" path="res://assets/Images/Objects/Post-it Normal.png" id="20_fb6cb"]
+[ext_resource type="Script" path="res://src/Game Interface/load_menu_focus.gd" id="20_uowmu"]
+[ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="21_irlee"]
+[ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="22_3yxr7"]
+[ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="23_5j6ji"]
+[ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="24_xoqnb"]
+[ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="25_1gcjb"]
+[ext_resource type="Script" path="res://src/Main Menu/load_6.gd" id="26_wg2u4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mnflp"]
+font = ExtResource("10_s3tc4")
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_cyq1h"]
+font = ExtResource("10_s3tc4")
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3glw"]
+font = ExtResource("10_s3tc4")
+font_size = 96
+
+[sub_resource type="Animation" id="Animation_mwgh0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blackboard:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 1200)]
+}
+
+[sub_resource type="Animation" id="Animation_hsu32"]
+resource_name = "pause_menu_toggle_off"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blackboard:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(600, 400), Vector2(600, 1200)]
+}
+
+[sub_resource type="Animation" id="Animation_5etb6"]
+resource_name = "pause_menu_toggle_on"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blackboard:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(600, 1200), Vector2(600, 400)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_knm1p"]
+_data = {
+"RESET": SubResource("Animation_mwgh0"),
+"pause_menu_toggle_off": SubResource("Animation_hsu32"),
+"pause_menu_toggle_on": SubResource("Animation_5etb6")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ad0n"]
+load_path = "res://.godot/imported/image(2).png-ea12bd4ca1e2e91fbac4cf74cdc98281.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_a0dxe"]
+font = ExtResource("10_s3tc4")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_uwky5"]
+font = ExtResource("10_s3tc4")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_kv7j3"]
+font = ExtResource("10_s3tc4")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4sy8"]
+font = ExtResource("10_s3tc4")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_84vuf"]
+font = ExtResource("10_s3tc4")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_4tfnf"]
+font = ExtResource("10_s3tc4")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
 
 [sub_resource type="Animation" id="Animation_cpsnb"]
 length = 0.001
@@ -426,108 +575,6 @@ _data = {
 "show_report_card": SubResource("Animation_riqib")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_mnflp"]
-font = ExtResource("10_s3tc4")
-font_size = 96
-
-[sub_resource type="LabelSettings" id="LabelSettings_cyq1h"]
-font = ExtResource("10_s3tc4")
-font_size = 96
-
-[sub_resource type="LabelSettings" id="LabelSettings_e3glw"]
-font = ExtResource("10_s3tc4")
-font_size = 96
-
-[sub_resource type="Animation" id="Animation_mwgh0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Blackboard:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(600, 1200)]
-}
-
-[sub_resource type="Animation" id="Animation_hsu32"]
-resource_name = "pause_menu_toggle_off"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Blackboard:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(600, 400), Vector2(600, 1200)]
-}
-
-[sub_resource type="Animation" id="Animation_5etb6"]
-resource_name = "pause_menu_toggle_on"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Blackboard:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(600, 1200), Vector2(600, 400)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_knm1p"]
-_data = {
-"RESET": SubResource("Animation_mwgh0"),
-"pause_menu_toggle_off": SubResource("Animation_hsu32"),
-"pause_menu_toggle_on": SubResource("Animation_5etb6")
-}
-
 [node name="Game Interface" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -573,12 +620,6 @@ texture = ExtResource("4_tpr1l")
 script = ExtResource("5_q7fih")
 ap = NodePath("../../../AnimationPlayer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-process_mode = 3
-libraries = {
-"": SubResource("AnimationLibrary_74iqx")
-}
-
 [node name="PhoneFocus" type="CanvasLayer" parent="."]
 
 [node name="Phone" type="Sprite2D" parent="PhoneFocus" node_paths=PackedStringArray("ap")]
@@ -608,7 +649,7 @@ ap = NodePath("../AnimationPlayer")
 pap = NodePath("PauseAnimationPlayer")
 
 [node name="Blackboard" type="Sprite2D" parent="PauseMenuFocus"]
-position = Vector2(600, 1200)
+position = Vector2(600, 400)
 rotation = 0.00263998
 scale = Vector2(0.32766, 0.32766)
 texture = ExtResource("6_r54p1")
@@ -678,6 +719,128 @@ libraries = {
 "": SubResource("AnimationLibrary_knm1p")
 }
 
+[node name="SaveLoadMenuFocus" type="CanvasLayer" parent="."]
+layer = 3
+script = ExtResource("20_uowmu")
+
+[node name="Chalkboard" type="Sprite2D" parent="SaveLoadMenuFocus"]
+position = Vector2(604, 390)
+texture = SubResource("CompressedTexture2D_6ad0n")
+
+[node name="Load1" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
+offset_left = -436.0
+offset_top = -253.0
+offset_right = 114.0
+offset_bottom = 289.0
+rotation = -0.0769885
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("20_fb6cb")
+script = ExtResource("21_irlee")
+
+[node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load1"]
+layout_mode = 0
+offset_left = 69.8492
+offset_top = 215.37
+offset_right = 487.849
+offset_bottom = 317.37
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_a0dxe")
+
+[node name="Load2" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
+offset_left = -112.0
+offset_top = -260.0
+offset_right = 438.0
+offset_bottom = 282.0
+rotation = 0.0602499
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("20_fb6cb")
+script = ExtResource("22_3yxr7")
+
+[node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load2"]
+layout_mode = 0
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_uwky5")
+
+[node name="Load3" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
+offset_left = 195.0
+offset_top = -257.0
+offset_right = 745.0
+offset_bottom = 285.001
+rotation = -0.0134794
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("20_fb6cb")
+script = ExtResource("23_5j6ji")
+
+[node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load3"]
+layout_mode = 0
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_kv7j3")
+
+[node name="Load4" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
+offset_left = -416.0
+offset_top = 32.0
+offset_right = 134.0
+offset_bottom = 574.0
+rotation = -0.00947072
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("20_fb6cb")
+script = ExtResource("24_xoqnb")
+
+[node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load4"]
+layout_mode = 0
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_g4sy8")
+
+[node name="Load5" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
+offset_left = -124.0
+offset_top = 37.0
+offset_right = 426.0
+offset_bottom = 579.0
+rotation = -0.0769885
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("20_fb6cb")
+script = ExtResource("25_1gcjb")
+
+[node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load5"]
+layout_mode = 0
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_84vuf")
+
+[node name="Load6" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
+offset_left = 218.0
+offset_top = 9.99999
+offset_right = 768.0
+offset_bottom = 552.0
+rotation = 0.178195
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("20_fb6cb")
+script = ExtResource("26_wg2u4")
+
+[node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load6"]
+layout_mode = 0
+offset_left = 65.2744
+offset_top = 223.075
+offset_right = 483.274
+offset_bottom = 325.075
+text = "NO SAVE FOUND"
+label_settings = SubResource("LabelSettings_4tfnf")
+
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -80.0
 script = ExtResource("15_ha3x2")
@@ -687,10 +850,32 @@ stream = ExtResource("15_2l0u7")
 volume_db = -25.0
 script = ExtResource("16_6rhim")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_74iqx")
+}
+
+[node name="SaveLoadAnimationPlayer" type="AnimationPlayer" parent="."]
+
 [connection signal="mouse_entered" from="PauseMenuFocus/Blackboard/SaveButton" to="PauseMenuFocus/Blackboard/SaveButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuFocus/Blackboard/SaveButton" to="PauseMenuFocus/Blackboard/SaveButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="PauseMenuFocus/Blackboard/SaveButton" to="SaveLoadMenuFocus" method="_on_save_button_pressed"]
 [connection signal="mouse_entered" from="PauseMenuFocus/Blackboard/LoadButton" to="PauseMenuFocus/Blackboard/LoadButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuFocus/Blackboard/LoadButton" to="PauseMenuFocus/Blackboard/LoadButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="PauseMenuFocus/Blackboard/LoadButton" to="SaveLoadMenuFocus" method="_on_load_button_pressed"]
 [connection signal="mouse_entered" from="PauseMenuFocus/Blackboard/QuitButton" to="PauseMenuFocus/Blackboard/QuitButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuFocus/Blackboard/QuitButton" to="PauseMenuFocus/Blackboard/QuitButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="PauseMenuFocus/Blackboard/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load1" to="SaveLoadMenuFocus/Chalkboard/Load1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load1" to="SaveLoadMenuFocus/Chalkboard/Load1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus/Chalkboard/Load2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus/Chalkboard/Load2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load3" to="SaveLoadMenuFocus/Chalkboard/Load3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load3" to="SaveLoadMenuFocus/Chalkboard/Load3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load4" to="SaveLoadMenuFocus/Chalkboard/Load4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load4" to="SaveLoadMenuFocus/Chalkboard/Load4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load5" to="SaveLoadMenuFocus/Chalkboard/Load5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load5" to="SaveLoadMenuFocus/Chalkboard/Load5" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load6" to="SaveLoadMenuFocus/Chalkboard/Load6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load6" to="SaveLoadMenuFocus/Chalkboard/Load6" method="_on_mouse_exited"]
