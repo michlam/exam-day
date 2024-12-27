@@ -517,7 +517,7 @@ libraries = {
 }
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -20.0
+volume_db = -80.0
 script = ExtResource("15_ha3x2")
 
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
