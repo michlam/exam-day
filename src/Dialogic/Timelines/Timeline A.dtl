@@ -14,22 +14,30 @@ set {bgm} = "bgm_1"
 [signal arg="play_bgm"]
 "Main Character": There we go. Looks like I'm up nice and early for my exam today.
 "Main Character": I've still got some time left before I have to leave for school. I'll have some breakfast first.
+set {sfx} = "cooking"
+[signal arg="play_sfx"]
 set {location} = "dining room"
 [signal arg="change_background"]
 [wait time="2.0"]
 "Main Character": ~~ Bacon pancakes, makin' bacon pancakes... ~~
+[signal arg="stop_sfx"]
 set {object} = "pancakes"
 [signal arg="place_object"]
 [wait time="1.0"]
+set {sfx} = "cutlery"
+[signal arg="play_sfx"]
 "Main Character": Mmmm, these pancakes bussin' bussin'
 "Main Character": I didn't study too much for this exam. I hope it isn't too hard, I need to pass this course to graduate.
 "Main Character": Alright, once I finish up this breakfast I'll head out.
+set {sfx} = "footsteps 1"
+[signal arg="play_sfx"]
 [wait time="1.0"]
 [signal arg="remove_object"]
-[wait time="1.0"]
+[wait time="2.0"]
 set {location} = "housefront"
 [signal arg="change_background"]
 "Main Character": Alright, time to go to campus.
+[signal arg="stop_sfx"]
 "Main Character": I wonder how I should get there...
 "Main Character": Commuting by bus would probably be faster, unless there's a traffic jam.
 "Main Character": On the other hand, biking would avoid any traffic, but I won't have any extra time to study left after getting to campus.
