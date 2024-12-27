@@ -7,11 +7,8 @@ func _ready():
 	visible = false
 
 func _input(event):
-	if event.is_action_pressed("tab") && Dialogic.VAR.FLAGS.get('phone_enabled'):
-		toggle()
+	if event.is_action_pressed("tab") && Dialogic.VAR.FLAGS.get('phone_enabled') && !visible:
+		toggle_on()
 
-func toggle():
-	if !visible:
-		ap.play("phone_toggle_on")
-	elif visible:
-		ap.play("phone_toggle_off")
+func toggle_on():
+	ap.play("phone_toggle_on")

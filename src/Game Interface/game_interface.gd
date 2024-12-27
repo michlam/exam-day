@@ -35,6 +35,10 @@ func _on_dialogic_signal(argument: String):
 			$SFXPlayer.play_sfx(Dialogic.VAR.get('sfx'))
 		"stop_sfx":
 			$SFXPlayer.stop_sfx()
+		"phone_toggle_off":
+			$AnimationPlayer.play("phone_toggle_off")
+		"end_scene":
+			$EndSceneFocus/ReportCard.initialize_end_scene()
 		"start_timeline_b":
 			start_timeline_b()
 		"start_timeline_c":
@@ -66,6 +70,9 @@ func start_timeline_c():
 
 func start_timeline_d():
 	Dialogic.start("Timeline Ending")
+
+func start_timeline_e():
+	Dialogic.start("Timeline Ending 2")
 
 
 func _on_quit_button_pressed() -> void:

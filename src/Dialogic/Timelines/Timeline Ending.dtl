@@ -16,6 +16,6 @@ I wake up the next morning to a phone notification.
 set {sfx} = "notification"
 [signal arg="play_sfx"]
 [wait time="1.0"]
-Press TAB to pull out your phone. Interact with your phone with ARROW and ENTER keys.
+Press TAB to pull out your phone.
 set {FLAGS.phone_enabled} = true
 [end_timeline]

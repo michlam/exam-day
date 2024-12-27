@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=39 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b7wic3ko8k5yj" path="res://assets/Images/Objects/Blackboard.png" id="6_r54p1"]
 [ext_resource type="Script" path="res://src/Game Interface/pause_menu_focus.gd" id="6_ryp6w"]
 [ext_resource type="Texture2D" uid="uid://c7u4v2vt2gbkr" path="res://assets/Images/Objects/Label_Blue.png" id="8_57p1u"]
+[ext_resource type="Script" path="res://src/Game Interface/report_card.gd" id="9_5ou05"]
 [ext_resource type="Script" path="res://src/Game Interface/save_button.gd" id="9_m2lua"]
 [ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="10_s3tc4"]
 [ext_resource type="Texture2D" uid="uid://7v2qe5mckor3" path="res://assets/Images/Objects/Label_Green.png" id="11_b8i0g"]
@@ -19,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dxp5c5ftw4hgg" path="res://assets/Images/Objects/Phone.png" id="15_wt4mh"]
 [ext_resource type="Script" path="res://src/Game Interface/bgm_player.gd" id="16_6rhim"]
 [ext_resource type="Script" path="res://src/Game Interface/phone.gd" id="16_52wnt"]
+[ext_resource type="Texture2D" uid="uid://cuiem308nqu3y" path="res://assets/Images/Characters/Bean Avatar.png" id="17_oa1vd"]
 
 [sub_resource type="Animation" id="Animation_cpsnb"]
 length = 0.001
@@ -327,6 +329,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.133333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_timeline_e"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_nu4w0"]
 resource_name = "phone_toggle_off"
@@ -522,6 +538,24 @@ libraries = {
 "": SubResource("AnimationLibrary_74iqx")
 }
 
+[node name="PhoneFocus" type="CanvasLayer" parent="."]
+
+[node name="Phone" type="Sprite2D" parent="PhoneFocus" node_paths=PackedStringArray("ap")]
+position = Vector2(920, 1120)
+scale = Vector2(0.206415, 0.206415)
+texture = ExtResource("15_wt4mh")
+script = ExtResource("16_52wnt")
+ap = NodePath("../../AnimationPlayer")
+
+[node name="ProfileIcon" type="Sprite2D" parent="PhoneFocus/Phone"]
+texture = ExtResource("17_oa1vd")
+
+[node name="EndSceneFocus" type="CanvasLayer" parent="."]
+
+[node name="ReportCard" type="Sprite2D" parent="EndSceneFocus" node_paths=PackedStringArray("ap")]
+script = ExtResource("9_5ou05")
+ap = NodePath("../../AnimationPlayer")
+
 [node name="PauseMenuFocus" type="CanvasLayer" parent="." node_paths=PackedStringArray("ap", "pap")]
 process_mode = 3
 layer = 2
@@ -599,15 +633,6 @@ label_settings = SubResource("LabelSettings_e3glw")
 libraries = {
 "": SubResource("AnimationLibrary_knm1p")
 }
-
-[node name="PhoneFocus" type="CanvasLayer" parent="."]
-
-[node name="Phone" type="Sprite2D" parent="PhoneFocus" node_paths=PackedStringArray("ap")]
-position = Vector2(920, 1120)
-scale = Vector2(0.206415, 0.206415)
-texture = ExtResource("15_wt4mh")
-script = ExtResource("16_52wnt")
-ap = NodePath("../../AnimationPlayer")
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -80.0

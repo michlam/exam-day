@@ -31,6 +31,7 @@ directories/dtl_directory={
 "Timeline Bike": "res://src/Dialogic/Timelines/Timeline Bike.dtl",
 "Timeline Bus": "res://src/Dialogic/Timelines/Timeline Bus.dtl",
 "Timeline Ending": "res://src/Dialogic/Timelines/Timeline Ending.dtl",
+"Timeline Ending 2": "res://src/Dialogic/Timelines/Timeline Ending 2.dtl",
 "Timeline Exam A": "res://src/Dialogic/Timelines/Timeline Exam A.dtl",
 "Timeline Exam B": "res://src/Dialogic/Timelines/Timeline Exam B.dtl",
 "Timeline Exam C": "res://src/Dialogic/Timelines/Timeline Exam C.dtl"
