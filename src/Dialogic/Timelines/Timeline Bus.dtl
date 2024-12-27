@@ -4,20 +4,26 @@ set {sfx} = "bus"
 set {location} = "bus"
 [signal arg="change_background"]
 [wait time="2.0"]
-The bus comes a little earlier than usual, with fewer people than what is typical at this time.
 [signal arg="stop_sfx"]
+The bus comes a little earlier than usual, with fewer people than what is typical at this time.
 "Main Character": Perhaps everyone is driving today? It's a good thing for me though, I get a nice seat today.
 I make myself comfortable, taking in the quiet cityscape through the window on my right.
 set {location} = "traffic"
 [signal arg="change_background"]
+set {sfx} = "traffic"
+[signal arg="play_sfx"]
 [wait time="1.0"]
+[signal arg="stop_sfx"]
 It's not long before we grind to a halt at the main road.
 Rearing my head to take a peek at the front windshield, the streets are carpeted with vehicles as far as the eye can see.
 "Main Character": Man, of course today's the day for there to be so much traffic in the morning.
 "Main Character": Welp, looks like I'm going to be late for my exam. Let's just hope I'm not so late I miss the exam entirely.
 set {location} = "campus"
 [signal arg="change_background"]
+set {sfx} = "footsteps 1"
+[signal arg="play_sfx"]
 [wait time="1.0"]
+[signal arg="stop_sfx"]
 As the bus rounds the campus station, I don't even stop to thank the driver as I rush off towards my exam room.
 My head races, hoping that my tardiness won't prevent me from being able to take the exam at all.
 set {location} = "hallway"
@@ -26,7 +32,11 @@ set {location} = "hallway"
 The hallway to the exam room is already empty.
 "Main Character": Looks like the students have already gone inside to take the exam.
 "Main Character": Maybe I can sneak in without anyone noticing...
+set {sfx} = "footsteps 2"
+[signal arg="play_sfx"]
+[wait time="1.0"]
 Before I can make it to the door, a voice echos from behind me.
+[signal arg="stop_sfx"]
 Professor: Snooping as usual I see.
 join Professor right [animation="Fade In"]
 "Main Character": Oh uh, hi professor...
@@ -36,9 +46,12 @@ Professor: That's hardly an excuse.
 Professor: Oh whatever, just hurry up and find any open seat remaining. I think there's one by the far wall over there.
 leave Professor [animation="Fade Out"]
 The professor directs me towards the far side of the class room, and I scramble myself as quickly as I can without disturbing the other students.
+set {sfx} = "clothes"
+[signal arg="play_sfx"]
 set {location} = "lecture"
 [signal arg="change_background"]
 [wait time="1.0"]
+[signal arg="stop_sfx"]
 set {FLAGS.exam} = "c"
 I settle myself down by a table with an exam booklet, and wait for the test to start.
 [signal arg="start_timeline_c"]
