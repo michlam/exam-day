@@ -13,8 +13,8 @@ set {location} = "traffic"
 set {sfx} = "traffic"
 [signal arg="play_sfx"]
 [wait time="1.0"]
-[signal arg="stop_sfx"]
 It's not long before we grind to a halt at the main road.
+[signal arg="stop_sfx"]
 Rearing my head to take a peek at the front windshield, the streets are carpeted with vehicles as far as the eye can see.
 "Main Character": Man, of course today's the day for there to be so much traffic in the morning.
 "Main Character": Welp, looks like I'm going to be late for my exam. Let's just hope I'm not so late I miss the exam entirely.
@@ -23,8 +23,8 @@ set {location} = "campus"
 set {sfx} = "footsteps 1"
 [signal arg="play_sfx"]
 [wait time="1.0"]
-[signal arg="stop_sfx"]
 As the bus rounds the campus station, I don't even stop to thank the driver as I rush off towards my exam room.
+[signal arg="stop_sfx"]
 My head races, hoping that my tardiness won't prevent me from being able to take the exam at all.
 set {location} = "hallway"
 [signal arg="change_background"]
@@ -41,7 +41,7 @@ Professor: Snooping as usual I see.
 join Professor right [animation="Fade In"]
 "Main Character": Oh uh, hi professor...
 Professor: You're late. Anything to say for yourself?
-"Main Character": Sorry, I should have gotten here on time but my bus was stuck in traffic for what seemed like forever.
+"Main Character": Sorry, the bus was stuck in traffic, and I...
 Professor: That's hardly an excuse.
 Professor: Oh whatever, just hurry up and find any open seat remaining. I think there's one by the far wall over there.
 leave Professor [animation="Fade Out"]

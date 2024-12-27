@@ -5,6 +5,8 @@ extends AudioStreamPlayer
 ############
 const audio_dict = {	
 	"alarm clock" = preload("res://assets/Audio/SFX/Alarm Clock.wav"),
+	"ambience" = preload("res://assets/Audio/SFX/Ambience.wav"),
+	"bike" = preload("res://assets/Audio/SFX/Bike.wav"),
 	"bus" = preload("res://assets/Audio/SFX/Bus.wav"),
 	"clothes" = preload("res://assets/Audio/SFX/Clothes.wav"),
 	"cooking" = preload("res://assets/Audio/SFX/Cooking.wav"),
@@ -17,8 +19,7 @@ const audio_dict = {
 
 func play_sfx(audio) -> void:
 	var tween = create_tween()
-	var tween_length = 1
-	
+	var tween_length = set_tween_length(audio)
 	var new_volume = set_volume(audio)
 	
 	volume_db = -80
@@ -26,6 +27,16 @@ func play_sfx(audio) -> void:
 	stream = audio_dict[audio]
 	play()
 	tween.tween_property(self, "volume_db", new_volume, tween_length)
+
+
+func set_tween_length(audio):
+	if audio == "bike":
+		return 0
+	if audio == "traffic":
+		return 0.25
+	
+	return 1
+
 
 func set_volume(audio):
 	if audio == "alarm clock":
@@ -38,6 +49,10 @@ func set_volume(audio):
 		return -25
 	if audio == "footsteps 2":
 		return -5
+	if audio == "ambience":
+		return -10
+	if audio == "bike":
+		return 0
 		
 	return 8
 

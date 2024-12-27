@@ -1,4 +1,6 @@
 "Main Character": I guess I'll commute to school by bike today. It'll be good way to get my physical activity in today.
+set {sfx} = "bike"
+[signal arg="play_sfx"]
 set {location} = "streets"
 [signal arg="change_background"]
 [wait time="1.0"]
@@ -6,7 +8,10 @@ As I bike through the city, the early morning streets are quiet and mostly empty
 The only faces that can be seen are those of tired office workers returning from another night shift.
 set {location} = "traffic"
 [signal arg="change_background"]
-[wait time="1.0"]
+set {sfx} = "traffic"
+[signal arg="play_sfx"]
+[wait time="2.0"]
+[signal arg="stop_sfx"]
 As I turn into the main street, the road is carpeted by vehicles stuck in a gridlock as far as the eyes can see.
 "Main Character": Whoa, there's so much traffic today. Was there an accident?
 "Main Character": It's a good thing I didn't choose to take the bus. I probably would have been late for sure!
@@ -18,6 +23,8 @@ Unlike the city streets, campus is already bustling with people.
 "Main Character": I guess everyone has exams right now. There's almost as many people here as during regular classes.
 set {location} = "hallway"
 [signal arg="change_background"]
+set {sfx} = "ambience"
+[signal arg="play_sfx"]
 [wait time="1.0"]
 The hallway to the exam room is packed with nervous students frantically doing their last minute cramming.
 Suddenly, a voice rings out from behind me.
@@ -32,6 +39,7 @@ Jimmy: Well, looks like it's time to lock in. Good luck!
 "Main Character": Yup, good luck Jimmy.
 leave Jimmy [animation="Slide Out Left" length="1.0"]
 I follow the stream of students into the exam room.
+[signal arg="stop_sfx"]
 set {location} = "classroom"
 [signal arg="change_background"]
 [wait time="1.0"]
@@ -50,7 +58,10 @@ I look around the room, deciding on where to sit. There's still plenty of seats 
 	set {FLAGS.exam} = "c"
 set {location} = "lecture"
 [signal arg="change_background"]
+set {sfx} = "clothes"
+[signal arg="play_sfx"]
 [wait time="1.0"]
+[signal arg="stop_sfx"]
 I settle myself down by a table with an exam booklet, and wait for the test to start.
 [signal arg="start_timeline_c"]
 [end_timeline]
