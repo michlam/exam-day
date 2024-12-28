@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://lmc07lnau5pr"]
+[gd_scene load_steps=31 format=3 uid="uid://lmc07lnau5pr"]
 
 [ext_resource type="Texture2D" uid="uid://bwt7u045rjvem" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
 [ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://src/Main Menu/load_menu.gd" id="9_sv0x3"]
 [ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="10_e231x"]
 [ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="11_gkrpf"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_1.gd" id="11_kh8hv"]
 [ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="12_fv1cq"]
 [ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="13_g7j8q"]
 [ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="14_7itt4"]
@@ -246,7 +247,6 @@ label_settings = SubResource("LabelSettings_e67l0")
 horizontal_alignment = 1
 
 [node name="LoadMenu" type="CanvasLayer" parent="CanvasLayer"]
-visible = false
 script = ExtResource("9_sv0x3")
 
 [node name="Chalkboard" type="Sprite2D" parent="CanvasLayer/LoadMenu"]
@@ -263,13 +263,20 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("10_e231x")
 
+[node name="Thumbnail_1" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load1"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("11_kh8hv")
+
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load1"]
 layout_mode = 0
 offset_left = 69.8492
 offset_top = 215.37
 offset_right = 487.849
 offset_bottom = 317.37
-text = "NO SAVE FOUND"
+text = "SLOT 1"
 label_settings = SubResource("LabelSettings_om1hq")
 
 [node name="Load2" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
@@ -288,7 +295,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 2"
 label_settings = SubResource("LabelSettings_mh3l4")
 
 [node name="Load3" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
@@ -307,7 +314,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 3"
 label_settings = SubResource("LabelSettings_30uwu")
 
 [node name="Load4" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
@@ -326,7 +333,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 4"
 label_settings = SubResource("LabelSettings_2yj7t")
 
 [node name="Load5" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
@@ -345,7 +352,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 5"
 label_settings = SubResource("LabelSettings_emrxe")
 
 [node name="Load6" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
@@ -364,7 +371,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 6"
 label_settings = SubResource("LabelSettings_8jkgs")
 
 [node name="TransitionColor" type="ColorRect" parent="CanvasLayer"]

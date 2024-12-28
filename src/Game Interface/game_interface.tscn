@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=57 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
@@ -26,6 +26,7 @@
 [ext_resource type="Script" path="res://src/Game Interface/load_menu_focus.gd" id="20_uowmu"]
 [ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="21_irlee"]
 [ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="22_3yxr7"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_1.gd" id="23_5emlv"]
 [ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="23_5j6ji"]
 [ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="24_xoqnb"]
 [ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="25_1gcjb"]
@@ -739,13 +740,20 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
 script = ExtResource("21_irlee")
 
+[node name="Thumbnail_1" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load1"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("23_5emlv")
+
 [node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load1"]
 layout_mode = 0
 offset_left = 69.8492
 offset_top = 215.37
 offset_right = 487.849
 offset_bottom = 317.37
-text = "NO SAVE FOUND"
+text = "SLOT 1"
 label_settings = SubResource("LabelSettings_a0dxe")
 
 [node name="Load2" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
@@ -764,7 +772,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 2"
 label_settings = SubResource("LabelSettings_uwky5")
 
 [node name="Load3" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
@@ -783,7 +791,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 3"
 label_settings = SubResource("LabelSettings_kv7j3")
 
 [node name="Load4" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
@@ -802,7 +810,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 4"
 label_settings = SubResource("LabelSettings_g4sy8")
 
 [node name="Load5" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
@@ -821,7 +829,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 5"
 label_settings = SubResource("LabelSettings_84vuf")
 
 [node name="Load6" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
@@ -840,7 +848,7 @@ offset_left = 65.2744
 offset_top = 223.075
 offset_right = 483.274
 offset_bottom = 325.075
-text = "NO SAVE FOUND"
+text = "SLOT 6"
 label_settings = SubResource("LabelSettings_4tfnf")
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]

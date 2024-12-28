@@ -32,7 +32,8 @@ func _on_load_1_pressed() -> void:
 		}
 		
 		Dialogic.Save.save("slot_1", false, Dialogic.Save.ThumbnailMode.STORE_ONLY, extra_info)
-		
+		$Chalkboard/Load1/Thumbnail.set_texture(Dialogic.Save.get_slot_thumbnail("slot_1"))
+
 	if mode == "load":
 		if Dialogic.Save.has_slot("slot_1"):
 			var location = Dialogic.Save.get_slot_info("slot_1").get("location", "")
@@ -40,4 +41,3 @@ func _on_load_1_pressed() -> void:
 			bgm_player.play_bgm("bgm_1")
 			
 			Dialogic.Save.load("slot_1")
-		
