@@ -6,6 +6,7 @@ extends Control
 func _ready() -> void:
 	$AnimationPlayer.play("fade_in")
 	$BackgroundFocus/ObjectFocus.visible = false
+	
 	initialize_dialogic()
 
 
