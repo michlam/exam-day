@@ -1,5 +1,8 @@
 extends AudioStreamPlayer
 
+@onready var MAIN = get_parent().get_parent()
+
+
 ############
 ## AUDIOS ##
 ############
@@ -19,6 +22,9 @@ const audio_dict = {
 
 
 func play_sfx(audio) -> void:
+	if !MAIN.sfx_enabled:
+		return
+		
 	var tween = create_tween()
 	var tween_length = set_tween_length(audio)
 	var new_volume = set_volume(audio)
@@ -62,6 +68,9 @@ func set_volume(audio):
 	return 8
 
 func stop_sfx() -> void:
+	if !MAIN.sfx_enabled:
+		return
+	
 	var tween = create_tween()
 	tween.tween_property(self, "volume_db", -80, 3)
 	

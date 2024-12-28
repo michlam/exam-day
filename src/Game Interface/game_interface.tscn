@@ -24,14 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://cuiem308nqu3y" path="res://assets/Images/Characters/Bean Avatar.png" id="17_oa1vd"]
 [ext_resource type="Texture2D" uid="uid://6byq51sxk7qb" path="res://assets/Images/Objects/Post-it Normal.png" id="20_fb6cb"]
 [ext_resource type="Script" path="res://src/Game Interface/load_menu_focus.gd" id="20_uowmu"]
-[ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="21_irlee"]
-[ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="22_3yxr7"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_1.gd" id="23_5emlv"]
-[ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="23_5j6ji"]
-[ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="24_xoqnb"]
-[ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="25_1gcjb"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_2.gd" id="25_fnauj"]
-[ext_resource type="Script" path="res://src/Main Menu/load_6.gd" id="26_wg2u4"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_3.gd" id="27_g7y0t"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_4.gd" id="29_0s0rc"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_5.gd" id="31_kqvh6"]
@@ -142,11 +136,33 @@ _data = {
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ad0n"]
 load_path = "res://.godot/imported/image(2).png-ea12bd4ca1e2e91fbac4cf74cdc98281.ctex"
 
+[sub_resource type="GDScript" id="GDScript_4eytk"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$Label.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$Label.label_settings.font_color = Color(\"BLACK\")
+"
+
 [sub_resource type="LabelSettings" id="LabelSettings_a0dxe"]
 font = ExtResource("10_s3tc4")
 font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
+
+[sub_resource type="GDScript" id="GDScript_bc2wl"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$Label.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$Label.label_settings.font_color = Color(\"BLACK\")
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwky5"]
 font = ExtResource("10_s3tc4")
@@ -154,11 +170,33 @@ font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
 
+[sub_resource type="GDScript" id="GDScript_y0uke"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$Label.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$Label.label_settings.font_color = Color(\"BLACK\")
+"
+
 [sub_resource type="LabelSettings" id="LabelSettings_kv7j3"]
 font = ExtResource("10_s3tc4")
 font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
+
+[sub_resource type="GDScript" id="GDScript_7y24v"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$Label.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$Label.label_settings.font_color = Color(\"BLACK\")
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4sy8"]
 font = ExtResource("10_s3tc4")
@@ -166,11 +204,33 @@ font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
 
+[sub_resource type="GDScript" id="GDScript_2p30i"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$Label.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$Label.label_settings.font_color = Color(\"BLACK\")
+"
+
 [sub_resource type="LabelSettings" id="LabelSettings_84vuf"]
 font = ExtResource("10_s3tc4")
 font_size = 100
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
+
+[sub_resource type="GDScript" id="GDScript_o4f41"]
+script/source = "extends TextureButton
+
+func _on_mouse_entered() -> void:
+	$Label.label_settings.font_color = Color(\"DARK_SALMON\")
+
+
+func _on_mouse_exited() -> void:
+	$Label.label_settings.font_color = Color(\"BLACK\")
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_4tfnf"]
 font = ExtResource("10_s3tc4")
@@ -745,7 +805,7 @@ offset_bottom = 289.0
 rotation = -0.0769885
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
-script = ExtResource("21_irlee")
+script = SubResource("GDScript_4eytk")
 
 [node name="Thumbnail_1" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load1"]
 position = Vector2(273, 272.268)
@@ -771,7 +831,7 @@ offset_bottom = 282.0
 rotation = 0.0602499
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
-script = ExtResource("22_3yxr7")
+script = SubResource("GDScript_bc2wl")
 
 [node name="Thumbnail_2" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load2"]
 position = Vector2(273, 272.268)
@@ -797,7 +857,7 @@ offset_bottom = 285.001
 rotation = -0.0134794
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
-script = ExtResource("23_5j6ji")
+script = SubResource("GDScript_y0uke")
 
 [node name="Thumbnail_3" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load3"]
 position = Vector2(273, 272.268)
@@ -823,7 +883,7 @@ offset_bottom = 574.0
 rotation = -0.00947072
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
-script = ExtResource("24_xoqnb")
+script = SubResource("GDScript_7y24v")
 
 [node name="Thumbnail_4" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load4"]
 position = Vector2(273, 272.268)
@@ -849,7 +909,7 @@ offset_bottom = 579.0
 rotation = -0.0769885
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
-script = ExtResource("25_1gcjb")
+script = SubResource("GDScript_2p30i")
 
 [node name="Thumbnail_5" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load5"]
 position = Vector2(273, 272.268)
@@ -875,7 +935,7 @@ offset_bottom = 552.0
 rotation = 0.178195
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
-script = ExtResource("26_wg2u4")
+script = SubResource("GDScript_o4f41")
 
 [node name="Thumbnail_6" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load6"]
 position = Vector2(273, 272.268)

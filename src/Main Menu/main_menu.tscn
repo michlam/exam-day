@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://lmc07lnau5pr"]
+[gd_scene load_steps=20 format=3 uid="uid://lmc07lnau5pr"]
 
 [ext_resource type="Texture2D" uid="uid://bwt7u045rjvem" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
 [ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
@@ -7,6 +7,10 @@
 [ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
 [ext_resource type="Script" path="res://src/Main Menu/settings_button.gd" id="6_lhbpo"]
 [ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="7_0th2w"]
+[ext_resource type="Script" path="res://src/Main Menu/settings_focus.gd" id="8_j0a72"]
+[ext_resource type="Texture2D" uid="uid://bh8l5e6gij3dj" path="res://assets/Images/Objects/Paper.jpg" id="9_jvxy2"]
+[ext_resource type="Script" path="res://src/Main Menu/music_label.gd" id="10_h8ob7"]
+[ext_resource type="Script" path="res://src/Main Menu/sfx_label.gd" id="11_c507j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6eut1"]
 font = ExtResource("3_rc6y7")
@@ -96,6 +100,20 @@ _data = {
 "fade_out": SubResource("Animation_o2mkw")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_wqybd"]
+font = ExtResource("3_rc6y7")
+font_size = 1000
+font_color = Color(0, 0, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_52136"]
+font = ExtResource("3_rc6y7")
+font_size = 1000
+font_color = Color(0, 0, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -113,11 +131,11 @@ texture = ExtResource("1_g75gw")
 region_rect = Rect2(30.8105, 2216.03, 4301.38, 2643.67)
 
 [node name="StartButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 94.0
-offset_top = 154.655
-offset_right = 644.0
-offset_bottom = 696.655
-rotation = -0.227668
+offset_left = 173.0
+offset_top = 193.0
+offset_right = 723.0
+offset_bottom = 735.0
+rotation = -0.0248494
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("3_hp2q6")
@@ -134,11 +152,11 @@ label_settings = SubResource("LabelSettings_6eut1")
 horizontal_alignment = 1
 
 [node name="SettingsButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 130.0
-offset_top = 512.655
-offset_right = 680.0
-offset_bottom = 1054.66
-rotation = -0.0887925
+offset_left = 180.0
+offset_top = 433.0
+offset_right = 730.0
+offset_bottom = 975.005
+rotation = -0.134713
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("6_lhbpo")
@@ -182,8 +200,74 @@ libraries = {
 "": SubResource("AnimationLibrary_hc8ru")
 }
 
+[node name="SettingsFocus" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("8_j0a72")
+
+[node name="SettingsBG" type="Sprite2D" parent="SettingsFocus"]
+position = Vector2(600, 400)
+rotation = 1.5708
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("9_jvxy2")
+
+[node name="MusicLabel" type="Label" parent="SettingsFocus/SettingsBG"]
+anchors_preset = -1
+anchor_left = -81.988
+anchor_top = 58.154
+anchor_right = -81.988
+anchor_bottom = 58.154
+offset_left = 407171.0
+offset_top = -407770.0
+offset_right = 411132.0
+offset_bottom = -406554.0
+rotation = -1.5708
+pivot_offset = Vector2(1960, 600)
+text = "MUSIC ON"
+label_settings = SubResource("LabelSettings_wqybd")
+horizontal_alignment = 1
+script = ExtResource("10_h8ob7")
+
+[node name="Button" type="Button" parent="SettingsFocus/SettingsBG/MusicLabel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 217.0
+offset_right = 3960.0
+offset_bottom = 978.0
+
+[node name="SFXLabel" type="Label" parent="SettingsFocus/SettingsBG"]
+anchors_preset = -1
+anchor_left = -81.988
+anchor_top = 58.154
+anchor_right = -81.988
+anchor_bottom = 58.154
+offset_left = 408779.0
+offset_top = -407770.0
+offset_right = 412740.0
+offset_bottom = -406554.0
+rotation = -1.5708
+pivot_offset = Vector2(1960, 600)
+text = "SFX ON"
+label_settings = SubResource("LabelSettings_52136")
+horizontal_alignment = 1
+script = ExtResource("11_c507j")
+
+[node name="Button" type="Button" parent="SettingsFocus/SettingsBG/SFXLabel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 217.0
+offset_right = 3960.0
+offset_bottom = 978.0
+pivot_offset = Vector2(1960, 400)
+
 [connection signal="mouse_entered" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="mouse_entered" from="SettingsFocus/SettingsBG/MusicLabel/Button" to="SettingsFocus/SettingsBG/MusicLabel" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SettingsFocus/SettingsBG/MusicLabel/Button" to="SettingsFocus/SettingsBG/MusicLabel" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="SettingsFocus/SettingsBG/MusicLabel/Button" to="SettingsFocus/SettingsBG/MusicLabel" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="SettingsFocus/SettingsBG/SFXLabel/Button" to="SettingsFocus/SettingsBG/SFXLabel" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SettingsFocus/SettingsBG/SFXLabel/Button" to="SettingsFocus/SettingsBG/SFXLabel" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="SettingsFocus/SettingsBG/SFXLabel/Button" to="SettingsFocus/SettingsBG/SFXLabel" method="_on_button_pressed"]

@@ -13,3 +13,7 @@ func start_game() -> void:
 	main_node.add_child(game_interface_instance)
 	
 	queue_free()
+
+
+func _on_settings_button_pressed() -> void:
+	$SettingsFocus.visible = true
