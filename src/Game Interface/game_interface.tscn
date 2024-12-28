@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dl7p557e4m0ag"]
+[gd_scene load_steps=62 format=3 uid="uid://dl7p557e4m0ag"]
 
 [ext_resource type="Script" path="res://src/Game Interface/game_interface.gd" id="1_ht1di"]
 [ext_resource type="Texture2D" uid="uid://b8hqouxsa670l" path="res://assets/Images/Locations/Bedroom.png" id="2_lf01c"]
@@ -30,7 +30,12 @@
 [ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="23_5j6ji"]
 [ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="24_xoqnb"]
 [ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="25_1gcjb"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_2.gd" id="25_fnauj"]
 [ext_resource type="Script" path="res://src/Main Menu/load_6.gd" id="26_wg2u4"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_3.gd" id="27_g7y0t"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_4.gd" id="29_0s0rc"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_5.gd" id="31_kqvh6"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_6.gd" id="33_lu60m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mnflp"]
 font = ExtResource("10_s3tc4")
@@ -766,6 +771,13 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
 script = ExtResource("22_3yxr7")
 
+[node name="Thumbnail_2" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load2"]
+position = Vector2(273, 272.268)
+rotation = -0.00872664
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("25_fnauj")
+
 [node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load2"]
 layout_mode = 0
 offset_left = 65.2744
@@ -784,6 +796,13 @@ rotation = -0.0134794
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
 script = ExtResource("23_5j6ji")
+
+[node name="Thumbnail_3" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load3"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("27_g7y0t")
 
 [node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load3"]
 layout_mode = 0
@@ -804,6 +823,13 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
 script = ExtResource("24_xoqnb")
 
+[node name="Thumbnail_4" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load4"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("29_0s0rc")
+
 [node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load4"]
 layout_mode = 0
 offset_left = 65.2744
@@ -823,6 +849,13 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
 script = ExtResource("25_1gcjb")
 
+[node name="Thumbnail_5" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load5"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("31_kqvh6")
+
 [node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load5"]
 layout_mode = 0
 offset_left = 65.2744
@@ -841,6 +874,13 @@ rotation = 0.178195
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("20_fb6cb")
 script = ExtResource("26_wg2u4")
+
+[node name="Thumbnail_6" type="Sprite2D" parent="SaveLoadMenuFocus/Chalkboard/Load6"]
+position = Vector2(273, 272.268)
+rotation = -0.00872664
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("33_lu60m")
 
 [node name="Label" type="Label" parent="SaveLoadMenuFocus/Chalkboard/Load6"]
 layout_mode = 0
@@ -882,11 +922,16 @@ libraries = {
 [connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load1" to="SaveLoadMenuFocus" method="_on_load_1_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus/Chalkboard/Load2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus/Chalkboard/Load2" method="_on_mouse_exited"]
+[connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus" method="_on_load_2_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load3" to="SaveLoadMenuFocus/Chalkboard/Load3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load3" to="SaveLoadMenuFocus/Chalkboard/Load3" method="_on_mouse_exited"]
+[connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load3" to="SaveLoadMenuFocus" method="_on_load_3_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load4" to="SaveLoadMenuFocus/Chalkboard/Load4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load4" to="SaveLoadMenuFocus/Chalkboard/Load4" method="_on_mouse_exited"]
+[connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load4" to="SaveLoadMenuFocus" method="_on_load_4_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load5" to="SaveLoadMenuFocus/Chalkboard/Load5" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load5" to="SaveLoadMenuFocus/Chalkboard/Load5" method="_on_mouse_exited"]
+[connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load5" to="SaveLoadMenuFocus" method="_on_load_5_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load6" to="SaveLoadMenuFocus/Chalkboard/Load6" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load6" to="SaveLoadMenuFocus/Chalkboard/Load6" method="_on_mouse_exited"]
+[connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load6" to="SaveLoadMenuFocus" method="_on_load_6_pressed"]

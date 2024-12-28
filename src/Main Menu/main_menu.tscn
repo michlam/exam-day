@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://lmc07lnau5pr"]
+[gd_scene load_steps=36 format=3 uid="uid://lmc07lnau5pr"]
 
 [ext_resource type="Texture2D" uid="uid://bwt7u045rjvem" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
 [ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
@@ -14,8 +14,13 @@
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_1.gd" id="11_kh8hv"]
 [ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="12_fv1cq"]
 [ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="13_g7j8q"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_2.gd" id="13_t05w7"]
 [ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="14_7itt4"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_3.gd" id="15_5y7kr"]
 [ext_resource type="Script" path="res://src/Main Menu/load_6.gd" id="15_pu2i1"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_4.gd" id="17_ytb37"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_5.gd" id="19_t64it"]
+[ext_resource type="Script" path="res://src/Game Interface/thumbnail_6.gd" id="21_t74f1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6eut1"]
 font = ExtResource("3_rc6y7")
@@ -247,6 +252,7 @@ label_settings = SubResource("LabelSettings_e67l0")
 horizontal_alignment = 1
 
 [node name="LoadMenu" type="CanvasLayer" parent="CanvasLayer"]
+visible = false
 script = ExtResource("9_sv0x3")
 
 [node name="Chalkboard" type="Sprite2D" parent="CanvasLayer/LoadMenu"]
@@ -289,6 +295,13 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("11_gkrpf")
 
+[node name="Thumbnail_2" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load2"]
+position = Vector2(273, 272.268)
+rotation = -0.00872664
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("13_t05w7")
+
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load2"]
 layout_mode = 0
 offset_left = 65.2744
@@ -307,6 +320,13 @@ rotation = -0.0134794
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("12_fv1cq")
+
+[node name="Thumbnail_3" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load3"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("15_5y7kr")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load3"]
 layout_mode = 0
@@ -327,6 +347,13 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("13_g7j8q")
 
+[node name="Thumbnail_4" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load4"]
+position = Vector2(273, 272.268)
+rotation = -0.00872665
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("17_ytb37")
+
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load4"]
 layout_mode = 0
 offset_left = 65.2744
@@ -346,6 +373,13 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("14_7itt4")
 
+[node name="Thumbnail_5" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load5"]
+position = Vector2(273, 272.268)
+rotation = -0.00872666
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("19_t64it")
+
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load5"]
 layout_mode = 0
 offset_left = 65.2744
@@ -364,6 +398,13 @@ rotation = 0.178195
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_epdgr")
 script = ExtResource("15_pu2i1")
+
+[node name="Thumbnail_6" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load6"]
+position = Vector2(273, 272.268)
+rotation = -0.00872664
+scale = Vector2(0.4, 0.4)
+region_rect = Rect2(400, 400, 400, 400)
+script = ExtResource("21_t74f1")
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load6"]
 layout_mode = 0
