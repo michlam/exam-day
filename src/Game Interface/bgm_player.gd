@@ -9,8 +9,9 @@ const audio_dict = {
 
 
 func play_bgm(audio) -> void:
-	stream = audio_dict[audio]
-	play()
+	if !playing:
+		stream = audio_dict[audio]
+		play()
 
 
 func stop_bgm() -> void:

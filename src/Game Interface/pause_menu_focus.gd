@@ -15,6 +15,7 @@ func _input(event):
 
 func toggle():
 	if !visible:
+		Dialogic.Save.take_thumbnail()
 		pap.play("pause_menu_toggle_on")
 	elif visible:
 		pap.play("pause_menu_toggle_off")

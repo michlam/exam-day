@@ -384,6 +384,76 @@ tracks/1/keys = {
 "values": [Vector2(600, 1200), Vector2(600, 400)]
 }
 
+[sub_resource type="Animation" id="Animation_nu4w0"]
+resource_name = "phone_toggle_off"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PhoneFocus/Phone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(920, 450), Vector2(920, 1120)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PhoneFocus/Phone:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_3n4ag"]
+resource_name = "phone_toggle_on"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PhoneFocus/Phone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(920, 1120), Vector2(920, 450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PhoneFocus/Phone:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.133333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_timeline_e"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_6xlgi"]
 resource_name = "place_object"
 length = 0.5
@@ -459,76 +529,6 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_3n4ag"]
-resource_name = "phone_toggle_on"
-length = 0.15
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PhoneFocus/Phone:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(920, 1120), Vector2(920, 450)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PhoneFocus/Phone:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.133333),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"start_timeline_e"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_nu4w0"]
-resource_name = "phone_toggle_off"
-length = 0.15
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PhoneFocus/Phone:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(920, 450), Vector2(920, 1120)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PhoneFocus/Phone:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.133333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -719,9 +719,11 @@ libraries = {
 "": SubResource("AnimationLibrary_knm1p")
 }
 
-[node name="SaveLoadMenuFocus" type="CanvasLayer" parent="."]
+[node name="SaveLoadMenuFocus" type="CanvasLayer" parent="." node_paths=PackedStringArray("bgm_player", "background")]
 layer = 3
 script = ExtResource("20_uowmu")
+bgm_player = NodePath("../BGMPlayer")
+background = NodePath("../BackgroundFocus/Background")
 
 [node name="Chalkboard" type="Sprite2D" parent="SaveLoadMenuFocus"]
 position = Vector2(604, 390)
@@ -869,6 +871,7 @@ libraries = {
 [connection signal="pressed" from="PauseMenuFocus/Blackboard/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load1" to="SaveLoadMenuFocus/Chalkboard/Load1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load1" to="SaveLoadMenuFocus/Chalkboard/Load1" method="_on_mouse_exited"]
+[connection signal="pressed" from="SaveLoadMenuFocus/Chalkboard/Load1" to="SaveLoadMenuFocus" method="_on_load_1_pressed"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus/Chalkboard/Load2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveLoadMenuFocus/Chalkboard/Load2" to="SaveLoadMenuFocus/Chalkboard/Load2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="SaveLoadMenuFocus/Chalkboard/Load3" to="SaveLoadMenuFocus/Chalkboard/Load3" method="_on_mouse_entered"]
