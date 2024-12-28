@@ -1,36 +1,14 @@
-[gd_scene load_steps=36 format=3 uid="uid://lmc07lnau5pr"]
+[gd_scene load_steps=14 format=3 uid="uid://lmc07lnau5pr"]
 
 [ext_resource type="Texture2D" uid="uid://bwt7u045rjvem" path="res://assets/Images/Locations/Classroom.png" id="1_g75gw"]
 [ext_resource type="Script" path="res://src/Main Menu/main_menu.gd" id="1_smct7"]
 [ext_resource type="Texture2D" uid="uid://6byq51sxk7qb" path="res://assets/Images/Objects/Post-it Normal.png" id="2_epdgr"]
 [ext_resource type="Script" path="res://src/Main Menu/start_button.gd" id="3_hp2q6"]
 [ext_resource type="FontFile" uid="uid://5kw6nkuhv8jj" path="res://assets/Fonts/Hand Write.ttf" id="3_rc6y7"]
-[ext_resource type="Script" path="res://src/Main Menu/load_button.gd" id="5_0eo4q"]
 [ext_resource type="Script" path="res://src/Main Menu/settings_button.gd" id="6_lhbpo"]
 [ext_resource type="FontFile" uid="uid://cr8w8hfg2f2a4" path="res://assets/Fonts/Brownist.otf" id="7_0th2w"]
-[ext_resource type="Script" path="res://src/Main Menu/load_menu.gd" id="9_sv0x3"]
-[ext_resource type="Script" path="res://src/Main Menu/load_1.gd" id="10_e231x"]
-[ext_resource type="Script" path="res://src/Main Menu/load_2.gd" id="11_gkrpf"]
-[ext_resource type="Script" path="res://src/Game Interface/thumbnail_1.gd" id="11_kh8hv"]
-[ext_resource type="Script" path="res://src/Main Menu/load_3.gd" id="12_fv1cq"]
-[ext_resource type="Script" path="res://src/Main Menu/load_4.gd" id="13_g7j8q"]
-[ext_resource type="Script" path="res://src/Game Interface/thumbnail_2.gd" id="13_t05w7"]
-[ext_resource type="Script" path="res://src/Main Menu/load_5.gd" id="14_7itt4"]
-[ext_resource type="Script" path="res://src/Game Interface/thumbnail_3.gd" id="15_5y7kr"]
-[ext_resource type="Script" path="res://src/Main Menu/load_6.gd" id="15_pu2i1"]
-[ext_resource type="Script" path="res://src/Game Interface/thumbnail_4.gd" id="17_ytb37"]
-[ext_resource type="Script" path="res://src/Game Interface/thumbnail_5.gd" id="19_t64it"]
-[ext_resource type="Script" path="res://src/Game Interface/thumbnail_6.gd" id="21_t74f1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6eut1"]
-font = ExtResource("3_rc6y7")
-font_size = 120
-outline_size = 32
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 25
-shadow_color = Color(0, 0, 0, 0.556863)
-
-[sub_resource type="LabelSettings" id="LabelSettings_7fekc"]
 font = ExtResource("3_rc6y7")
 font_size = 120
 outline_size = 32
@@ -52,45 +30,6 @@ font_size = 240
 font_color = Color(0.8, 0.8, 0.8, 1)
 outline_size = 32
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3x0y1"]
-load_path = "res://.godot/imported/image(2).png-ea12bd4ca1e2e91fbac4cf74cdc98281.ctex"
-
-[sub_resource type="LabelSettings" id="LabelSettings_om1hq"]
-font = ExtResource("7_0th2w")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-outline_size = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_mh3l4"]
-font = ExtResource("7_0th2w")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-outline_size = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_30uwu"]
-font = ExtResource("7_0th2w")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-outline_size = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_2yj7t"]
-font = ExtResource("7_0th2w")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-outline_size = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_emrxe"]
-font = ExtResource("7_0th2w")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-outline_size = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_8jkgs"]
-font = ExtResource("7_0th2w")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-outline_size = 8
 
 [sub_resource type="Animation" id="Animation_6cdss"]
 length = 2.0
@@ -194,27 +133,6 @@ GAME"
 label_settings = SubResource("LabelSettings_6eut1")
 horizontal_alignment = 1
 
-[node name="LoadButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 323.0
-offset_top = 278.655
-offset_right = 873.0
-offset_bottom = 820.655
-rotation = 0.369716
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("5_0eo4q")
-
-[node name="LoadLabel" type="Label" parent="CanvasLayer/LoadButton"]
-layout_mode = 0
-offset_left = 145.151
-offset_top = 123.668
-offset_right = 401.151
-offset_bottom = 420.668
-text = "LOAD
-GAME"
-label_settings = SubResource("LabelSettings_7fekc")
-horizontal_alignment = 1
-
 [node name="SettingsButton" type="TextureButton" parent="CanvasLayer"]
 offset_left = 130.0
 offset_top = 512.655
@@ -251,170 +169,6 @@ DAY"
 label_settings = SubResource("LabelSettings_e67l0")
 horizontal_alignment = 1
 
-[node name="LoadMenu" type="CanvasLayer" parent="CanvasLayer"]
-visible = false
-script = ExtResource("9_sv0x3")
-
-[node name="Chalkboard" type="Sprite2D" parent="CanvasLayer/LoadMenu"]
-position = Vector2(604, 390)
-texture = SubResource("CompressedTexture2D_3x0y1")
-
-[node name="Load1" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -436.0
-offset_top = -253.0
-offset_right = 114.0
-offset_bottom = 289.0
-rotation = -0.0769885
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("10_e231x")
-
-[node name="Thumbnail_1" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load1"]
-position = Vector2(273, 272.268)
-rotation = -0.00872665
-scale = Vector2(0.4, 0.4)
-region_rect = Rect2(400, 400, 400, 400)
-script = ExtResource("11_kh8hv")
-
-[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load1"]
-layout_mode = 0
-offset_left = 69.8492
-offset_top = 215.37
-offset_right = 487.849
-offset_bottom = 317.37
-text = "SLOT 1"
-label_settings = SubResource("LabelSettings_om1hq")
-
-[node name="Load2" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -112.0
-offset_top = -260.0
-offset_right = 438.0
-offset_bottom = 282.0
-rotation = 0.0602499
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("11_gkrpf")
-
-[node name="Thumbnail_2" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load2"]
-position = Vector2(273, 272.268)
-rotation = -0.00872664
-scale = Vector2(0.4, 0.4)
-region_rect = Rect2(400, 400, 400, 400)
-script = ExtResource("13_t05w7")
-
-[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load2"]
-layout_mode = 0
-offset_left = 65.2744
-offset_top = 223.075
-offset_right = 483.274
-offset_bottom = 325.075
-text = "SLOT 2"
-label_settings = SubResource("LabelSettings_mh3l4")
-
-[node name="Load3" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = 195.0
-offset_top = -257.0
-offset_right = 745.0
-offset_bottom = 285.001
-rotation = -0.0134794
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("12_fv1cq")
-
-[node name="Thumbnail_3" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load3"]
-position = Vector2(273, 272.268)
-rotation = -0.00872665
-scale = Vector2(0.4, 0.4)
-region_rect = Rect2(400, 400, 400, 400)
-script = ExtResource("15_5y7kr")
-
-[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load3"]
-layout_mode = 0
-offset_left = 65.2744
-offset_top = 223.075
-offset_right = 483.274
-offset_bottom = 325.075
-text = "SLOT 3"
-label_settings = SubResource("LabelSettings_30uwu")
-
-[node name="Load4" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -416.0
-offset_top = 32.0
-offset_right = 134.0
-offset_bottom = 574.0
-rotation = -0.00947072
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("13_g7j8q")
-
-[node name="Thumbnail_4" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load4"]
-position = Vector2(273, 272.268)
-rotation = -0.00872665
-scale = Vector2(0.4, 0.4)
-region_rect = Rect2(400, 400, 400, 400)
-script = ExtResource("17_ytb37")
-
-[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load4"]
-layout_mode = 0
-offset_left = 65.2744
-offset_top = 223.075
-offset_right = 483.274
-offset_bottom = 325.075
-text = "SLOT 4"
-label_settings = SubResource("LabelSettings_2yj7t")
-
-[node name="Load5" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = -124.0
-offset_top = 37.0
-offset_right = 426.0
-offset_bottom = 579.0
-rotation = -0.0769885
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("14_7itt4")
-
-[node name="Thumbnail_5" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load5"]
-position = Vector2(273, 272.268)
-rotation = -0.00872666
-scale = Vector2(0.4, 0.4)
-region_rect = Rect2(400, 400, 400, 400)
-script = ExtResource("19_t64it")
-
-[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load5"]
-layout_mode = 0
-offset_left = 65.2744
-offset_top = 223.075
-offset_right = 483.274
-offset_bottom = 325.075
-text = "SLOT 5"
-label_settings = SubResource("LabelSettings_emrxe")
-
-[node name="Load6" type="TextureButton" parent="CanvasLayer/LoadMenu/Chalkboard"]
-offset_left = 218.0
-offset_top = 9.99999
-offset_right = 768.0
-offset_bottom = 552.0
-rotation = 0.178195
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_epdgr")
-script = ExtResource("15_pu2i1")
-
-[node name="Thumbnail_6" type="Sprite2D" parent="CanvasLayer/LoadMenu/Chalkboard/Load6"]
-position = Vector2(273, 272.268)
-rotation = -0.00872664
-scale = Vector2(0.4, 0.4)
-region_rect = Rect2(400, 400, 400, 400)
-script = ExtResource("21_t74f1")
-
-[node name="Label" type="Label" parent="CanvasLayer/LoadMenu/Chalkboard/Load6"]
-layout_mode = 0
-offset_left = 65.2744
-offset_top = 223.075
-offset_right = 483.274
-offset_bottom = 325.075
-text = "SLOT 6"
-label_settings = SubResource("LabelSettings_8jkgs")
-
 [node name="TransitionColor" type="ColorRect" parent="CanvasLayer"]
 visible = false
 offset_left = -68.0
@@ -431,20 +185,5 @@ libraries = {
 [connection signal="mouse_entered" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadButton" to="CanvasLayer/LoadButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="CanvasLayer/LoadButton" to="." method="_on_load_button_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/SettingsButton" to="CanvasLayer/SettingsButton" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load1" to="CanvasLayer/LoadMenu/Chalkboard/Load1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load1" to="CanvasLayer/LoadMenu/Chalkboard/Load1" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load2" to="CanvasLayer/LoadMenu/Chalkboard/Load2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load2" to="CanvasLayer/LoadMenu/Chalkboard/Load2" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load3" to="CanvasLayer/LoadMenu/Chalkboard/Load3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load3" to="CanvasLayer/LoadMenu/Chalkboard/Load3" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load4" to="CanvasLayer/LoadMenu/Chalkboard/Load4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load4" to="CanvasLayer/LoadMenu/Chalkboard/Load4" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load5" to="CanvasLayer/LoadMenu/Chalkboard/Load5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load5" to="CanvasLayer/LoadMenu/Chalkboard/Load5" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/LoadMenu/Chalkboard/Load6" to="CanvasLayer/LoadMenu/Chalkboard/Load6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/LoadMenu/Chalkboard/Load6" to="CanvasLayer/LoadMenu/Chalkboard/Load6" method="_on_mouse_exited"]
