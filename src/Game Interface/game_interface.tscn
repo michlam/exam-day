@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cuiem308nqu3y" path="res://assets/Images/Characters/Bean Avatar.png" id="17_oa1vd"]
 [ext_resource type="Texture2D" uid="uid://6byq51sxk7qb" path="res://assets/Images/Objects/Post-it Normal.png" id="20_fb6cb"]
 [ext_resource type="Script" path="res://src/Game Interface/load_menu_focus.gd" id="20_uowmu"]
+[ext_resource type="Texture2D" uid="uid://b8ym5tpgal64s" path="res://assets/Images/Objects/Whiteboard.png" id="21_eg3w4"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_1.gd" id="23_5emlv"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_2.gd" id="25_fnauj"]
 [ext_resource type="Script" path="res://src/Game Interface/thumbnail_3.gd" id="27_g7y0t"]
@@ -132,9 +133,6 @@ _data = {
 "pause_menu_toggle_off": SubResource("Animation_hsu32"),
 "pause_menu_toggle_on": SubResource("Animation_5etb6")
 }
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ad0n"]
-load_path = "res://.godot/imported/image(2).png-ea12bd4ca1e2e91fbac4cf74cdc98281.ctex"
 
 [sub_resource type="GDScript" id="GDScript_4eytk"]
 script/source = "extends TextureButton
@@ -795,7 +793,7 @@ report_card = NodePath("../EndSceneFocus/ReportCard")
 
 [node name="Chalkboard" type="Sprite2D" parent="SaveLoadMenuFocus"]
 position = Vector2(604, 390)
-texture = SubResource("CompressedTexture2D_6ad0n")
+texture = ExtResource("21_eg3w4")
 
 [node name="Load1" type="TextureButton" parent="SaveLoadMenuFocus/Chalkboard"]
 offset_left = -436.0
