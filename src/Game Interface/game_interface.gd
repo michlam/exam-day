@@ -85,8 +85,3 @@ func _on_quit_button_pressed() -> void:
 	main_node.add_child(main_menu_instance)
 	
 	queue_free()
-
-
-func _input(event): # FOR TESTING ONLY!
-	if event.is_action_pressed("skip"):
-		Dialogic.Inputs.auto_skip.enabled = !Dialogic.Inputs.auto_skip.enabled
