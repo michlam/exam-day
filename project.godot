@@ -70,6 +70,7 @@ variables={
 "transit": ""
 },
 "bgm": "bgm_1",
+"end_scene": false,
 "location": "bedroom",
 "object": "alarm",
 "pause_disabled": false,

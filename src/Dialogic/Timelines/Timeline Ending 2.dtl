@@ -9,5 +9,6 @@ set {FLAGS.phone_enabled} = false
 [wait time="0.5"]
 I get up out of bed to check my exam score.
 set {pause_disabled} = true
+set {end_scene} = true
 [signal arg="end_scene"]
 [end_timeline]

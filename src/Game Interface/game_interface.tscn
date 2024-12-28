@@ -725,11 +725,13 @@ libraries = {
 "": SubResource("AnimationLibrary_knm1p")
 }
 
-[node name="SaveLoadMenuFocus" type="CanvasLayer" parent="." node_paths=PackedStringArray("bgm_player", "background")]
+[node name="SaveLoadMenuFocus" type="CanvasLayer" parent="." node_paths=PackedStringArray("bgm_player", "sfx_player", "background", "report_card")]
 layer = 3
 script = ExtResource("20_uowmu")
 bgm_player = NodePath("../BGMPlayer")
+sfx_player = NodePath("../SFXPlayer")
 background = NodePath("../BackgroundFocus/Background")
+report_card = NodePath("../EndSceneFocus/ReportCard")
 
 [node name="Chalkboard" type="Sprite2D" parent="SaveLoadMenuFocus"]
 position = Vector2(604, 390)
