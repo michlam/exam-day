@@ -1,5 +1,6 @@
 # Exam Day
-A basic visual novel to learn Godot and Dialogic. 
+You have one exam remaining before you can enjoy your sweet summer freedom. Go through the life of the protagonist on their exam day in this basic visual novel to learn Godot and Dialogic.
+
 
 ## Planned Features
 There are a few features that I hope to implement:
