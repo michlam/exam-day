@@ -1,7 +1,7 @@
 # Exam Day
 You have one exam remaining before you can enjoy your sweet summer freedom. Go through the life of the protagonist on their exam day in this basic visual novel to learn Godot and Dialogic.
 
-You can download the most recent version of the game by going to [Releases](https://github.com/michlam/exam-day/releases/tag/v.1.0.0.2).
+You can download the most recent version of the game by going to [Releases](https://github.com/michlam/exam-day/releases).
 
 
 ## Planned Features
